@@ -62,6 +62,7 @@ src/generate_data.py   -> data/raw/*.csv, data/truth/labels.csv
 src/clean.py           -> data/clean/*.parquet, dq_log.csv, validation_report.csv
 notebooks/01_data_quality.ipynb
 notebooks/02_eda.ipynb -> images/*.png
+src/run_notebooks.py   executes both notebooks in place (nbclient)
 ```
 
 Run everything: `pip install -r requirements.txt && ./run_all.sh`
@@ -85,9 +86,31 @@ Every rule writes how many rows it touched to `data/clean/dq_log.csv`; removed r
 
 Validation checks include: unique keys, every order id matching `ORD-nnnnnnn`, GST = 18% of fee to the paisa, payout net = gross − fee − GST − refunds − chargebacks, payout gross = sum of the gateway's captured transactions for 30 batches, and the bank running balance recomputing exactly.
 
-## Findings so far
+## Findings so far (Day 2, from `notebooks/02_eda.ipynb`)
 
-_Filled in from notebook output on Day 2 — see below._
+**Control totals don't tie.** October ERP net sales are ₹2,19,91,231.50; PayFlux credits in the bank are ₹2,04,49,800.31 — a gap of **₹15,41,431.19**. That gap mixes fees, timing and real breaks; the work below starts pulling them apart.
+
+![First-pass match](images/01_first_pass_match.png)
+
+**1. A plain order-id join gets 97.7% of the way.** 23,435 of 23,976 order ids match exactly. 73 more differ by ±₹1 (net −₹1; a tolerance rule should clear them). That leaves **468 keys worth ₹4.30 L** that need a decision.
+
+![Cut-off spikes](images/02_cutoff_spikes.png)
+
+**2. 112 of the 277 "missing" rows are a report-extraction artefact.** The ERP books in IST but the gateway report was pulled by UTC date. 62 of the 156 ERP-only rows (₹0.63 L) were posted on 1 Oct between 00:00 and 05:30 IST, which is still 30 Sep in UTC. 50 of the 121 gateway-only rows (₹0.47 L) are 1 Nov in IST. Fix: pull the report by IST date, and treat rows within 5½ hours of a month boundary as *timing*, not *breaks*.
+
+**3. Every amount difference above ₹1 is an under-collection.** In all 114 cases the gateway collected 5.2%–19.9% less than the ERP booked (median 12.3%, ₹0.12 L in total). It's one-directional and sized like a coupon, so it points to discounts applied at checkout after the ERP order was created. That's a process gap, not keying noise.
+
+![Fees vs contract](images/03_fee_vs_contract.png)
+
+**4. The gateway charges above contract.** Wallet MDR moved from 2.000% to **2.250% on 15 Oct**, with no contract change (1,308 wallet transactions affected). 87 of 5,920 card payments (1.47%) were charged **2.40%** instead of 1.90%. The October excess is ₹3,955 including GST. That's small in rupees, but it's a control failure that compounds every month, and nobody would see it without a per-transaction fee check.
+
+**5. Money left through refunds and chargebacks that the books don't show.** 133 of 427 October refunds (31%, ₹1.05 L) have no ERP credit note. Chargebacks of ₹0.25 L were netted out of 11 payouts, with no ERP entry.
+
+![Payouts vs bank](images/04_payouts_vs_bank.png)
+
+**6. Two settlements are not in the October bank statement.** The 31 Oct batch (₹6,64,381.60) is in transit, which is normal timing. The **19 Oct batch (₹6,41,741.68)** was due on 20 Oct and was paid only on 3 Nov (T+15). It was held by the gateway and needs a follow-up and an aged receivable.
+
+**7. Breaks are not concentrated in one payment method or channel.** Chi-square tests of break rate (excluding the cut-off window) give p = 0.200 for payment method and p = 0.317 for channel. The causes look like process (manual bookings, discounts, unposted refunds), not one faulty integration.
 
 ## Repository layout
 ```
