@@ -1,0 +1,19 @@
+rule_id,table,rule,rows_affected,action
+R01,ledger,"Parse 3 mixed timestamp formats (ISO, dd/mm/yyyy, dd-Mon-yyyy 12h)",7265,standardised
+R02,ledger,Strip thousands separators from text amounts,1165,standardised
+R03,ledger,Blank payment mode (manual journal) set to 'Unknown',129,flagged
+R04,ledger,Remove test postings (TEST- refs / C_TEST customer),40,quarantined
+R05,ledger,"Remove duplicate postings (same order, type and amount; later voucher kept out)",72,quarantined
+R06,ledger,Postings outside October IST,0,checked (none expected)
+R07,ledger,"Rows in -> out (24,261 -> 24,149)",112,summary
+R08,gateway,Remove exact duplicate export rows,48,quarantined
+R09,gateway,"Normalise merchant_ref (case, spaces, '_' and missing '-')",4778,standardised
+R10,gateway,Convert UTC to IST (rows whose calendar date changes),1725,standardised
+R11,gateway,"Convert paise to rupees (amount, fee, GST)",24250,standardised
+R12,gateway,UTC-dated export rows that fall on 1 Nov IST (out of October period),53,"flagged, kept for cut-off analysis"
+R13,gateway,Failed payment attempts (no money moved),77,flagged
+R14,gateway,"Rows in -> out (24,298 -> 24,250)",48,summary
+R15,payouts,Convert paise to rupees; derive batch date from settlement_id,32,standardised
+R16,payouts,Settlements with chargeback deductions,11,flagged
+R17,bank,Parse dd-mm-yyyy value dates,111,standardised
+R18,bank,Classify narration and extract PayFlux UTR,30,enriched

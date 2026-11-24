@@ -1,0 +1,20 @@
+check,passed,detail
+ledger voucher_no unique,True,
+ledger order_id matches ORD-nnnnnnn,True,
+ledger postings all in October IST,True,
+"ledger receipts positive, credit notes negative",True,
+ledger one receipt per order,True,
+ledger no nulls in key columns,True,
+gateway txn_id unique,True,
+gateway order_id matches ORD-nnnnnnn,True,
+gateway method mapped,True,
+gateway fee between 0% and 3% of amount,True,
+gateway GST = 18% of fee (+-1 paise),True,max diff Rs 0.005
+gateway failed rows have no fee,True,
+gateway failed rows have no settlement,True,
+payout net = gross - fee - GST - refunds - chargebacks,True,
+payout settlement_id unique,True,
+payout gross = sum of captured txns (2-31 Oct batches),True,30 batches compared
+bank running balance recomputes,True,
+bank every PayFlux credit has a UTR,True,
+bank no row has both credit and debit,True,
