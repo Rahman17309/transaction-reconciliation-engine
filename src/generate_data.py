@@ -144,7 +144,7 @@ def main() -> None:
     n_go = int(round(n * P_GATEWAY_ONLY))
     go_idx = rng.choice(g.index[g.status == "captured"], n_go, replace=False)
     gateway_only_ids = set(g.loc[go_idx, "order_id"])
-    for oid in gateway_only_ids:
+    for oid in sorted(gateway_only_ids):
         labels.append({"source": "gateway", "key": oid, "issue": "gateway_only_not_booked"})
 
     # fees
