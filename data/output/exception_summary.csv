@@ -1,0 +1,11 @@
+class,exception_type,owner,items,txns,impact_inr,oldest_days
+break,SETTLEMENT_OVERDUE,Treasury,1,1,641741.68,11
+break,REFUND_NO_CREDIT_NOTE,Finance (AR),133,133,105075.0,27
+break,NO_GATEWAY_RECORD,Finance (AR),94,94,102268.0,30
+break,GATEWAY_NOT_BOOKED,Finance (GL),71,71,61929.0,30
+break,BOOKED_PAYMENT_FAILED,Finance (AR),77,77,58982.0,30
+break,CHARGEBACK_NOT_BOOKED,Finance (AR),11,11,25150.0,27
+break,AMOUNT_MISMATCH,E-commerce ops,114,114,11553.0,30
+claim,FEE_ABOVE_CONTRACT,Treasury / vendor manager,2,1395,3953.16,29
+timing,SETTLEMENT_IN_TRANSIT,Treasury,1,1,664381.6,-2
+timing,CUTOFF_TIMING,Finance (GL),115,115,113626.5,30

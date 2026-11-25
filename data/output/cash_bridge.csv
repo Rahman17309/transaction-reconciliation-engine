@@ -1,0 +1,16 @@
+step,item,kind,amount_inr,running_inr
+1,"ERP net sales, October (receipts + credit notes)",start,21991231.5,21991231.5
+2,Booked but never captured (no record / failed),break,-161250.0,21829981.5
+3,Captured but never booked,break,61929.0,21891910.5
+4,Checkout discounts not passed to ERP (amount mismatch),break,-11553.0,21880357.5
+5,Rounding within ±₹1,matched,-1.0,21880356.5
+6,Cut-off: unexported 1 Oct captures not in ERP,timing,256.0,21880612.5
+7,Gateway fees (MDR) and 18% GST on fees,cost,-262236.51,21618375.99
+8,Refunds netted by gateway with no ERP credit note,break,-105075.0,21513300.99
+9,Credit-note vs refund differences and refund timing,timing,0.0,21513300.99
+10,"Chargebacks netted from payouts, not booked",break,-25150.0,21488150.99
+11,30 Sep batch credited on 1 Oct (September sales),timing,267772.6,21755923.59
+12,19 Oct batch held by gateway (overdue),break,-641741.68,21114181.91
+13,31 Oct batch in transit (due 2 Nov),timing,-664381.6,20449800.31
+14,Unexplained,residual,0.0,20449800.31
+15,PayFlux credits in October bank statement,end,20449800.31,20449800.31
