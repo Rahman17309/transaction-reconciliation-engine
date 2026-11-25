@@ -2,7 +2,7 @@
 
 Three-way month-end reconciliation for an online retailer: **ERP ledger ↔ payment gateway ↔ bank statement**, with rule-based matching, exception reporting and a finance dashboard.
 
-> Status: **in progress** (week of 23–29 Nov 2026). Day 2 of 7: data, cleaning pipeline and EDA are done. SQL matching, validation against ground truth and the dashboard follow.
+> Status: **in progress** (week of 23–29 Nov 2026). Day 3 of 7: data, cleaning, EDA and the SQL matching engine are done. Scoring against ground truth and the dashboard follow.
 
 ## The business problem
 
@@ -60,9 +60,11 @@ The ground-truth file `data/truth/labels.csv` is only used to score the engine; 
 ```
 src/generate_data.py   -> data/raw/*.csv, data/truth/labels.csv
 src/clean.py           -> data/clean/*.parquet, dq_log.csv, validation_report.csv
+src/match.py           -> runs sql/*.sql in DuckDB -> data/output/ (matches, exception register, cash bridge)
 notebooks/01_data_quality.ipynb
-notebooks/02_eda.ipynb -> images/*.png
-src/run_notebooks.py   executes both notebooks in place (nbclient)
+notebooks/02_eda.ipynb
+notebooks/03_sql_engine.ipynb -> images/*.png
+src/run_notebooks.py   executes every notebook in place (nbclient)
 ```
 
 Run everything: `pip install -r requirements.txt && ./run_all.sh`
@@ -112,21 +114,102 @@ Validation checks include: unique keys, every order id matching `ORD-nnnnnnn`, G
 
 **7. Breaks are not concentrated in one payment method or channel.** Chi-square tests of break rate (excluding the cut-off window) give p = 0.200 for payment method and p = 0.317 for channel. The causes look like process (manual bookings, discounts, unposted refunds), not one faulty integration.
 
+## The SQL engine (Day 3, `sql/` + `notebooks/03_sql_engine.ipynb`)
+
+The matching rules are plain SQL files run in order by DuckDB, so finance can read and change them without touching Python. The engine reads only `data/clean/`, never the truth labels.
+
+| File | Job | Techniques |
+|---|---|---|
+| `00_staging.sql` | typed views, period/tolerance parameters, contracted MDR table | parameter table, `REPLACE` casts |
+| `10_ledger_vs_gateway.sql` | leg 1 rule cascade (R1–R9) + probable-pair diagnostic | `FULL OUTER JOIN`, ordered `CASE`, mutual-best `ROW_NUMBER()` |
+| `20_refunds_chargebacks.sql` | refunds ↔ credit notes, chargebacks | `LEFT` / `ANTI JOIN` |
+| `30_fee_audit.sql` | every capture re-priced at contract; daily effective rate | `LAG()`, running `SUM() OVER` |
+| `40_settlement_vs_bank.sql` | leg 2 payout rebuilt from its transactions (many-to-one); leg 3 payout ↔ bank by UTR | `FILTER` aggregates, due-date logic, running-balance window |
+| `50_exception_register.sql` | one register: owner, action, age, rank in type, Pareto share | `UNION ALL`, `RANK()`, cumulative window |
+| `60_cash_bridge.sql` | ERP net sales → bank credits, line by line | running total, residual line |
+
+`python src/match.py` runs it and checks 7 integrity rules (every row gets exactly one outcome on every leg, payouts rebuild from transactions, no orphan bank credits, bank balance recomputes, bridge residual ≤ ₹1). **7/7 pass.**
+
+**Leg 1 rule cascade** (one outcome per order id, first matching rule wins)
+
+| Rule | Outcome | Keys | Value |
+|---|---|---:|---:|
+| R1 exact | matched | 23,435 | ₹2,18,28,252 |
+| R2 within ±₹1 | matched | 73 | ₹65,024 |
+| R3 amount mismatch | break | 114 | ₹97,315 |
+| R4 booked, payment failed | break | 77 | ₹58,982 |
+| R5 cut-off, ERP side (1 Oct before 05:30 IST) | timing | 62 | ₹63,347 |
+| R6 cut-off, gateway side (1 Nov IST) | timing | 50 | ₹46,656 |
+| R7 booked, no gateway record | break | 94 | ₹1,02,268 |
+| R8 captured, not booked | break | 71 | ₹61,929 |
+
+![Rule cascade](images/05_rule_cascade.png)
+
+- **98.05% of 23,976 keys auto-match** (Day 2's exact join: 97.74%). The 112 cut-off rows move to *timing*, leaving **356 leg-1 breaks worth ₹3.20 L**.
+- A mutual-best search for mistyped order ids (same amount and method, within 10 minutes) found **0 probable pairs**, so the one-sided rows are real omissions.
+- `LAG()` over daily effective rates finds the **wallet MDR step on 15 Oct (2.00% → 2.25%)** with no date hard-coded. Fee excess above contract: ₹3,445.15 on 1,308 wallet and ₹508.01 on 87 card transactions (incl. GST).
+- **30 of 32 payouts rebuild exactly** from their transactions (gross, fee, GST, refunds). The two that don't are the 30 Sep and 1 Oct batches, whose early captures fall outside the UTC-dated export.
+
+**Exception register: 619 items** (`data/output/exception_register.csv`)
+
+| Class | Type | Owner | Items | ₹ impact |
+|---|---|---|---:|---:|
+| break | Settlement overdue (19 Oct batch) | Treasury | 1 | 6,41,741.68 |
+| break | Refund with no credit note | Finance (AR) | 133 | 1,05,075.00 |
+| break | Booked, no gateway record | Finance (AR) | 94 | 1,02,268.00 |
+| break | Captured, not booked | Finance (GL) | 71 | 61,929.00 |
+| break | Booked, payment failed | Finance (AR) | 77 | 58,982.00 |
+| break | Chargeback not booked | Finance (AR) | 11 | 25,150.00 |
+| break | Amount mismatch (checkout discount) | E-commerce ops | 114 | 11,553.00 |
+| claim | Fee above contract (2 methods, 1,395 txns) | Treasury / vendor manager | 2 | 3,953.16 |
+| timing | Settlement in transit (31 Oct) | Treasury | 1 | 6,64,381.60 |
+| timing | Cut-off window | Finance (GL) | 115 | 1,13,626.50 |
+
+![Exception register](images/06_exception_register.png)
+
+The 501 breaks total ₹10.07 L, and the single held payout is 63.7% of that. 72 items cover 80% of the break value, so a reviewer can clear most of the money by working the top of the list. A `QUALIFY ROW_NUMBER() OVER (PARTITION BY owner …) <= 3` query gives each owner a starting queue.
+
+**Cash bridge: the ₹15.41 L gap explained to ₹0.00**
+
+| Step | ₹ |
+|---|---:|
+| ERP net sales, October | 2,19,91,231.50 |
+| Booked but never captured (no record / failed) | −1,61,250.00 |
+| Captured but never booked | +61,929.00 |
+| Checkout discounts not passed to ERP | −11,553.00 |
+| Rounding within ±₹1 | −1.00 |
+| Cut-off: unexported 1 Oct captures not in ERP | +256.00 |
+| Gateway fees and GST on fees | −2,62,236.51 |
+| Refunds netted with no credit note | −1,05,075.00 |
+| Credit-note vs refund timing | 0.00 |
+| Chargebacks netted, not booked | −25,150.00 |
+| 30 Sep batch credited on 1 Oct | +2,67,772.60 |
+| 19 Oct batch held by gateway | −6,41,741.68 |
+| 31 Oct batch in transit | −6,64,381.60 |
+| **Unexplained** | **0.00** |
+| PayFlux credits in October bank statement | 2,04,49,800.31 |
+
+![Cash bridge](images/07_cash_bridge.png)
+
+The ₹256 cut-off line is money inside the 1 Oct payout that sits outside the UTC export and isn't in the ERP's cut-off rows either: most likely unbooked captures from 1 Oct 00:00–05:30 IST. It can only be pinned to orders once the report is re-pulled by IST date.
+
 ## Repository layout
 ```
 data/raw/        source exports (generated)
 data/clean/      cleaned tables, DQ log, validation report, quarantine
+data/output/     engine outputs: leg matches, fee audit, exception register, cash bridge
 data/truth/      injected-problem labels (scoring only)
 docs/            data dictionary
 notebooks/       executed notebooks
 images/          charts used in this README
-src/             generator, cleaning pipeline, notebook runner
+sql/             the matching engine (DuckDB), run in file order
+src/             generator, cleaning pipeline, engine runner, notebook runner
 ```
 
 ## Roadmap
 - [x] Day 1 — problem, data dictionary, generator, cleaning pipeline with validation
 - [x] Day 2 — EDA and first findings
-- [ ] Day 3 — SQL (DuckDB) matching: exact, normalised, tolerance and many-to-one rules
+- [x] Day 3 — SQL (DuckDB) engine: rule cascade, fee audit, payout rebuild, exception register, cash bridge
 - [ ] Day 4 — engine scored against ground truth (precision / recall per exception type)
 - [ ] Day 5 — reconciliation dashboard
 - [ ] Day 6 — ₹ impact, recommendations, case study
