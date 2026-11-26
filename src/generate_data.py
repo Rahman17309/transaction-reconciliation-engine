@@ -16,15 +16,17 @@ Run:  python src/generate_data.py   (deterministic, seed 42)
 from __future__ import annotations
 
 from datetime import date, datetime, timedelta
+import os
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-SEED = 42
+SEED = int(os.environ.get("SEED", 42))          # override for robustness runs (src/robustness.py)
 ROOT = Path(__file__).resolve().parents[1]
-RAW = ROOT / "data" / "raw"
-TRUTH = ROOT / "data" / "truth"
+DATA = Path(os.environ.get("DATA_DIR", ROOT / "data"))
+RAW = DATA / "raw"
+TRUTH = DATA / "truth"
 
 IST = timedelta(hours=5, minutes=30)
 # Orders are simulated from 30 Sep 18:00 IST to 1 Nov 08:00 IST so that the

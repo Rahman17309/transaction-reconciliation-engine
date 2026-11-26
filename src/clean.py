@@ -9,6 +9,7 @@ Run:  python src/clean.py
 """
 from __future__ import annotations
 
+import os
 import re
 import sys
 from pathlib import Path
@@ -17,8 +18,9 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-RAW = ROOT / "data" / "raw"
-CLEAN = ROOT / "data" / "clean"
+DATA = Path(os.environ.get("DATA_DIR", ROOT / "data"))
+RAW = DATA / "raw"
+CLEAN = DATA / "clean"
 PERIOD_START = pd.Timestamp("2026-10-01")
 PERIOD_END = pd.Timestamp("2026-11-01")  # exclusive
 ORDER_RE = re.compile(r"^ORD-\d{7}$")
