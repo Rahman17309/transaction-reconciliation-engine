@@ -1,620 +1,620 @@
 exception_id,leg,exception_type,class,owner,action,ref,amount_inr,impact_inr,event_date,n_txns,age_days,rank_in_type,cum_share_of_breaks
-1,L3,SETTLEMENT_OVERDUE,break,Treasury,Escalate to PayFlux; book as receivable from gateway,setl_20261019,641741.68,641741.68,2026-10-20,1,11,1,0.637471462662492
-2,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1013302,6568.0,6568.0,2026-10-17,1,14,1,0.6439957584925015
-3,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1010831,6143.0,6143.0,2026-10-14,1,17,2,0.6500978823176763
-4,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261019,5470.0,5470.0,2026-10-19,1,12,1,0.6555314843563717
-5,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261027,5164.0,5164.0,2026-10-27,1,4,2,0.6606611225515862
-6,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1011291,4487.0,4487.0,2026-10-19,1,12,1,0.6651182655767464
-7,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1001885,4477.0,4477.0,2026-10-03,1,28,3,0.6695654751429693
-8,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1017898,4371.0,4371.0,2026-10-23,1,8,4,0.673907390044457
-9,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1015217,3835.0,3835.0,2026-10-20,1,11,1,0.6777168715469062
-10,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012254,3518.0,3518.0,2026-10-21,1,10,2,0.6812114624010434
-11,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1006433,3103.0,3103.0,2026-10-08,1,23,1,0.6842938147092832
-12,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1000450,2940.0,2940.0,2026-10-01,1,30,5,0.6872142516368454
-13,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1018774,2895.0,2895.0,2026-10-25,1,6,3,0.6900899879991896
-14,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1018282,2857.0,2857.0,2026-10-24,1,7,6,0.6929279772175722
-15,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261014,2816.0,2816.0,2026-10-14,1,17,3,0.695725239254312
-16,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019826,2769.0,2769.0,2026-10-29,1,2,4,0.6984758140340465
-17,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1016108,2750.0,2750.0,2026-10-21,1,10,7,0.7012075152418
-18,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015566,2663.0,2663.0,2026-10-23,1,8,5,0.7038527953567993
-19,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1022334,2630.0,2630.0,2026-10-31,1,0,6,0.7064652950573056
-20,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261009,2601.0,2601.0,2026-10-09,1,22,4,0.7090489877268936
-21,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1005701,2536.0,2536.0,2026-10-11,1,20,7,0.7115681129133894
-22,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1009455,2515.0,2515.0,2026-10-12,1,19,2,0.7140663778361168
-23,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1016406,2492.0,2492.0,2026-10-25,1,6,8,0.7165417958032885
-24,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017576,2433.0,2433.0,2026-10-27,1,4,9,0.7189586063627301
-25,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1008995,2340.0,2340.0,2026-10-12,1,19,8,0.7212830357540551
-26,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261012,2337.0,2337.0,2026-10-12,1,19,5,0.7236044851076988
-27,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261020,2311.0,2311.0,2026-10-20,1,11,6,0.7259001074681055
-28,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1010489,2246.0,2246.0,2026-10-14,1,17,9,0.72813116234542
-29,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1003019,2108.0,2108.0,2026-10-04,1,27,2,0.7302251354893999
-30,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1018296,2073.0,2073.0,2026-10-24,1,7,10,0.7322843415270993
-31,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1002057,2045.0,2045.0,2026-10-07,1,24,10,0.7343157338797742
-32,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1016629,1995.0,1995.0,2026-10-22,1,9,11,0.7362974589377628
-33,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1003032,1991.0,1991.0,2026-10-05,1,26,11,0.7382752106121765
-34,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019974,1930.0,1930.0,2026-10-29,1,2,12,0.7401923681870727
-35,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1022625,1914.0,1914.0,2026-10-29,1,2,3,0.7420936322276692
-36,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1008619,1883.0,1883.0,2026-10-11,1,20,4,0.7439641025455601
-37,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1020854,1867.0,1867.0,2026-10-27,1,4,3,0.7458186793291515
-38,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1016297,1856.0,1856.0,2026-10-21,1,10,12,0.7476623293079117
-39,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1011500,1849.0,1849.0,2026-10-15,1,16,13,0.7494990258654158
-40,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1007157,1834.0,1834.0,2026-10-09,1,22,4,0.7513208222345141
-41,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1005995,1820.0,1820.0,2026-10-08,1,23,5,0.7531287117611002
-42,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1010204,1805.0,1805.0,2026-10-13,1,18,6,0.7549217010992803
-43,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1002471,1802.0,1802.0,2026-10-03,1,28,7,0.7567117103997792
-44,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1019750,1759.0,1759.0,2026-10-25,1,6,8,0.7584590058268478
-45,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1001805,1737.0,1737.0,2026-10-02,1,29,14,0.7601844476442544
-46,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1000482,1721.0,1721.0,2026-10-01,1,30,5,0.7618939959273613
-47,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1018616,1688.0,1688.0,2026-10-28,1,3,13,0.7635707637959752
-48,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1015503,1687.0,1687.0,2026-10-20,1,11,15,0.7652465383186954
-49,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1009005,1680.0,1680.0,2026-10-12,1,19,9,0.7669153594201594
-50,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1002031,1663.0,1663.0,2026-10-03,1,28,10,0.7685672936414301
-51,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1002164,1659.0,1659.0,2026-10-07,1,24,14,0.7702152544791258
-52,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1022592,1599.0,1599.0,2026-10-29,1,2,16,0.7718036145631978
-53,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1009995,1577.0,1577.0,2026-10-13,1,18,17,0.7733701210376078
-54,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1013545,1566.0,1566.0,2026-10-18,1,13,6,0.7749257007071868
-55,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1005538,1541.0,1541.0,2026-10-07,1,24,11,0.7764564467294226
-56,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1011499,1535.0,1535.0,2026-10-19,1,12,15,0.7779812326762959
-57,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013933,1523.5,1523.5,2026-10-22,1,9,16,0.7794945951453914
-58,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1024051,1523.0,1523.0,2026-10-31,1,0,12,0.7810074609415402
-59,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1016035,1505.0,1505.0,2026-10-21,1,10,18,0.7825024465116017
-60,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1016160,1479.0,1479.0,2026-10-27,1,4,17,0.7839716050884262
-61,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1021288,1463.0,1463.0,2026-10-28,1,3,7,0.7854248701309512
-62,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1011736,1456.0,1456.0,2026-10-15,1,16,8,0.78687118175222
-63,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013342,1429.0,1429.0,2026-10-19,1,12,18,0.7882906730343582
-64,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1010842,1398.0,1398.0,2026-10-14,1,17,13,0.7896793705937908
-65,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1022638,1393.0,1393.0,2026-10-29,1,2,14,0.7910631014237547
-66,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1017248,1383.0,1383.0,2026-10-22,1,9,9,0.7924368987947814
-67,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1005009,1366.0,1366.0,2026-10-07,1,24,19,0.7937938092856146
-68,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1004935,1362.0,1362.0,2026-10-06,1,25,10,0.795146746392873
-69,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1009219,1351.0,1351.0,2026-10-12,1,19,20,0.7964887566953003
-70,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1008016,1349.0,1349.0,2026-10-10,1,21,11,0.7978287803059402
-71,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1013328,1347.0,1347.0,2026-10-17,1,14,12,0.7991668172247927
-72,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1010559,1345.0,1345.0,2026-10-14,1,17,21,0.8005028674518576
-73,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1000527,1343.0,1343.0,2026-10-04,1,27,19,0.8018369309871352
-74,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1019235,1337.0,1337.0,2026-10-25,1,6,22,0.8031650344470502
-75,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1023714,1327.0,1327.0,2026-10-31,1,0,15,0.8044832044480281
-76,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1024041,1285.0,1285.0,2026-10-31,1,0,23,0.8057596539214693
-77,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1012250,1284.0,1284.0,2026-10-16,1,15,16,0.8070351100490168
-78,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019550,1263.0,1263.0,2026-10-31,1,0,20,0.808289705912796
-79,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1004870,1262.0,1262.0,2026-10-06,1,25,24,0.8095433084306816
-80,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1022961,1260.0,1260.0,2026-10-31,1,0,21,0.8107949242567796
-81,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1015853,1258.0,1258.0,2026-10-21,1,10,13,0.8120445533910902
-82,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1008174,1239.0,1239.0,2026-10-11,1,20,14,0.8132753089534199
-83,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019240,1235.0,1235.0,2026-10-30,1,1,22,0.8145020911321748
-84,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1022750,1234.0,1234.0,2026-10-30,1,1,25,0.8157278799650358
-85,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1023936,1230.0,1230.0,2026-10-31,1,0,26,0.816949695414322
-86,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1007800,1229.0,1229.0,2026-10-10,1,21,27,0.8181705175177144
-87,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1021514,1222.0,1222.0,2026-10-31,1,0,23,0.8193843861998508
-88,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1010007,1219.0,1219.0,2026-10-13,1,18,28,0.8205952748443059
-89,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1004104,1213.0,1213.0,2026-10-05,1,26,17,0.8218002034133988
-90,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1015003,1209.0,1209.0,2026-10-19,1,12,18,0.8230011585989166
-91,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1023733,1198.0,1198.0,2026-10-31,1,0,29,0.8241911869796035
-92,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012510,1194.0,1194.0,2026-10-21,1,10,24,0.8253772419767155
-93,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014156,1194.0,1194.0,2026-10-18,1,13,30,0.8265632969738274
-94,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1018635,1177.0,1177.0,2026-10-24,1,7,19,0.8277324650907459
-95,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1024207,1174.0,1174.0,2026-10-31,1,0,15,0.8288986531699833
-96,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1011595,1161.0,1161.0,2026-10-19,1,12,25,0.8300519277526022
-97,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1003906,1147.0,1147.0,2026-10-05,1,26,20,0.8311912954927089
-98,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1009482,1137.0,1137.0,2026-10-17,1,14,26,0.8323207297738783
-99,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1010239,1124.0,1124.0,2026-10-13,1,18,31,0.8334372505584293
-100,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1011678,1116.0,1116.0,2026-10-15,1,16,16,0.8345458245758304
-101,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1021277,1116.0,1116.0,2026-10-28,1,3,21,0.8356543985932315
-102,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012340,1107.0,1107.0,2026-10-22,1,9,27,0.8367540324975891
-103,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1017226,1098.0,1098.0,2026-10-22,1,9,32,0.837844726288903
-104,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015702,1093.5,1093.5,2026-10-23,1,8,28,0.8389309500236953
-105,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1015833,1091.0,1091.0,2026-10-21,1,10,22,0.8400146903937532
-106,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1021748,1087.0,1087.0,2026-10-31,1,0,29,0.8410944573802361
-107,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012208,1073.0,1073.0,2026-10-20,1,11,30,0.842160317524207
-108,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1009573,1063.0,1063.0,2026-10-14,1,17,31,0.8432162442092405
-109,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1018725,1056.0,1056.0,2026-10-24,1,7,17,0.8442652174730179
-110,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1020309,1051.0,1051.0,2026-10-26,1,5,33,0.8453092240073266
-111,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1023506,1048.0,1048.0,2026-10-31,1,0,34,0.8463502505039542
-112,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1001356,1040.0,1040.0,2026-10-02,1,29,23,0.8473833302334319
-113,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1013617,1030.0,1030.0,2026-10-18,1,13,35,0.8484064765039724
-114,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012913,1020.0,1020.0,2026-10-23,1,8,32,0.8494196893155755
-115,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1014657,1017.0,1017.0,2026-10-21,1,10,33,0.8504299220894975
-116,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1019170,1016.0,1016.0,2026-10-25,1,6,18,0.8514391615175257
-117,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261024,1009.0,1009.0,2026-10-24,1,7,7,0.852441447524298
-118,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1004025,1001.0,1001.0,2026-10-05,1,26,19,0.8534357867639203
-119,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1010548,1001.0,1001.0,2026-10-15,1,16,34,0.8544301260035426
-120,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1017457,996.0,996.0,2026-10-23,1,8,20,0.8554194985136963
-121,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1023640,993.0,993.0,2026-10-31,1,0,21,0.8564058909861688
-122,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1006662,992.0,992.0,2026-10-09,1,22,36,0.8573912901127475
-123,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1001125,989.0,989.0,2026-10-02,1,29,24,0.8583737092016451
-124,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1010525,984.0,984.0,2026-10-14,1,17,22,0.859351161561074
-125,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261016,984.0,984.0,2026-10-16,1,15,8,0.860328613920503
-126,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1008173,976.0,976.0,2026-10-11,1,20,37,0.8612981195127821
-127,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1005032,969.0,969.0,2026-10-12,1,19,35,0.8622606716838052
-128,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1021413,963.0,963.0,2026-10-28,1,3,38,0.8632172637794657
-129,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1008652,948.0,948.0,2026-10-11,1,20,39,0.8641589556867205
-130,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012577,947.0,947.0,2026-10-19,1,12,36,0.8650996542480814
-131,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014990,944.0,944.0,2026-10-19,1,12,40,0.8660373727717613
-132,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1017169,943.0,943.0,2026-10-22,1,9,25,0.8669740979495474
-133,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1007283,939.0,939.0,2026-10-09,1,22,41,0.8679068497437585
-134,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1017195,925.0,925.0,2026-10-22,1,9,42,0.8688256946954575
-135,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1011671,922.0,922.0,2026-10-21,1,10,37,0.8697415596094752
-136,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1003240,914.0,914.0,2026-10-04,1,27,23,0.8706494777563432
-137,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1003480,904.0,904.0,2026-10-05,1,26,43,0.8715474624442738
-138,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1014015,902.0,902.0,2026-10-18,1,13,24,0.872443460440417
-139,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261010,898.0,898.0,2026-10-10,1,21,9,0.8733354850529853
-140,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1020505,888.0,888.0,2026-10-27,1,4,26,0.8742175762066162
-141,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017463,879.0,879.0,2026-10-25,1,6,38,0.8750907272472037
-142,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1011939,876.0,876.0,2026-10-21,1,10,39,0.8759608982501099
-143,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1008721,875.0,875.0,2026-10-14,1,17,40,0.8768300759071225
-144,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1004883,864.0,864.0,2026-10-06,1,25,25,0.877688326759304
-145,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261004,864.0,864.0,2026-10-04,1,27,10,0.8785465776114855
-146,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014973,859.0,859.0,2026-10-19,1,12,44,0.8793998617341984
-147,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1010770,858.0,858.0,2026-10-14,1,17,27,0.8802521525110175
-148,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1011607,856.0,856.0,2026-10-15,1,16,28,0.8811024565960491
-149,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1004325,851.0,851.0,2026-10-10,1,21,41,0.8819477939516123
-150,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020125,844.5,844.5,2026-10-31,1,0,42,0.8827866745588661
-151,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1015182,838.0,838.0,2026-10-20,1,11,29,0.8836190984178106
-152,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1000836,833.0,833.0,2026-10-07,1,24,43,0.8844465555472865
-153,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019383,832.5,832.5,2026-10-30,1,1,44,0.8852735160038155
-154,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1009399,816.0,816.0,2026-10-12,1,19,30,0.8860840862530981
-155,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1017765,816.0,816.0,2026-10-23,1,8,26,0.8868946565023806
-156,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013378,815.0,815.0,2026-10-19,1,12,45,0.8877042334057694
-157,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1003152,813.0,813.0,2026-10-04,1,27,27,0.8885118236173708
-158,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1002916,811.0,811.0,2026-10-10,1,21,46,0.8893174271371846
-159,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1005829,810.0,810.0,2026-10-12,1,19,47,0.8901220373111048
-160,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013274,807.0,807.0,2026-10-21,1,10,48,0.8909236674473439
-161,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1022161,807.0,807.0,2026-10-29,1,2,31,0.8917252975835828
-162,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1006441,795.0,795.0,2026-10-08,1,23,45,0.8925150075690971
-163,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019368,792.5,792.5,2026-10-28,1,3,49,0.893302234189877
-164,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1014970,781.0,781.0,2026-10-19,1,12,32,0.894078037332879
-165,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1003958,776.0,776.0,2026-10-05,1,26,28,0.8948488737464124
-166,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1023535,771.0,771.0,2026-10-31,1,0,29,0.8956147434304771
-167,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1008519,770.5,770.5,2026-10-13,1,18,50,0.896380116441595
-168,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1003338,769.0,769.0,2026-10-04,1,27,46,0.8971439994338724
-169,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1016532,767.0,767.0,2026-10-21,1,10,30,0.8979058957343622
-170,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1022460,766.0,766.0,2026-10-29,1,2,47,0.8986667986889583
-171,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1002987,763.0,763.0,2026-10-04,1,27,48,0.8994247216058732
-172,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1008701,762.0,762.0,2026-10-11,1,20,31,0.9001816511768944
-173,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1011205,761.0,761.0,2026-10-14,1,17,32,0.9009375874020218
-174,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1001616,757.0,757.0,2026-10-06,1,25,51,0.9016895502435743
-175,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1021587,749.0,749.0,2026-10-28,1,3,49,0.9024335663179771
-176,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1006372,744.0,744.0,2026-10-08,1,23,50,0.9031726156629112
-177,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1009673,743.0,743.0,2026-10-17,1,14,52,0.9039106716619515
-178,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1007520,736.0,736.0,2026-10-10,1,21,33,0.9046417742397358
-179,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003355,4932.0,732.0,2026-10-04,1,27,1,0.9053689034339452
-180,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1013597,730.0,730.0,2026-10-18,1,13,34,0.906094045936367
-181,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015221,726.0,726.0,2026-10-24,1,7,53,0.9068152150552139
-182,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1002131,725.0,725.0,2026-10-03,1,28,51,0.9075353908281671
-183,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1019312,723.0,723.0,2026-10-25,1,6,33,0.908253579909333
-184,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1021086,722.0,722.0,2026-10-31,1,0,54,0.908970775644605
-185,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012886,718.0,718.0,2026-10-22,1,9,55,0.9096839979963022
-186,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1006757,713.5,713.5,2026-10-13,1,18,56,0.9103927502914775
-187,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1023699,712.0,712.0,2026-10-31,1,0,35,0.9111000125678123
-188,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1007910,711.0,711.0,2026-10-13,1,18,57,0.9118062814982533
-189,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020778,711.0,711.0,2026-10-31,1,0,57,0.9125125504286943
-190,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1022172,711.0,711.0,2026-10-29,1,2,36,0.9132188193591354
-191,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1001984,708.0,708.0,2026-10-03,1,28,37,0.9139221082518952
-192,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1011033,698.0,698.0,2026-10-14,1,17,38,0.9146154636857178
-193,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1013616,697.0,697.0,2026-10-18,1,13,52,0.9153078257736466
-194,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261028,696.0,696.0,2026-10-28,1,3,11,0.9159991945156817
-195,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1003831,687.0,687.0,2026-10-05,1,26,53,0.9166816231446733
-196,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1009109,686.0,686.0,2026-10-12,1,19,34,0.9173630584277711
-197,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1007749,683.0,683.0,2026-10-10,1,21,39,0.9180415136731876
-198,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1007056,681.0,681.0,2026-10-09,1,22,40,0.9187179822268169
-199,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1019022,680.0,680.0,2026-10-25,1,6,35,0.9193934574345524
-200,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012505,671.0,671.0,2026-10-18,1,13,59,0.9200599925292442
-201,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1023268,671.0,671.0,2026-10-30,1,1,41,0.9207265276239361
-202,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1020810,668.0,668.0,2026-10-27,1,4,42,0.9213900826809468
-203,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1015437,652.0,652.0,2026-10-20,1,11,54,0.9220377442036578
-204,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1004801,649.0,649.0,2026-10-06,1,25,55,0.9226824256886877
-205,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1022701,649.0,649.0,2026-10-30,1,1,55,0.9233271071737176
-206,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1012908,647.0,647.0,2026-10-17,1,14,57,0.92396980196696
-207,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1018950,643.0,643.0,2026-10-28,1,3,60,0.9246085233766275
-208,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1001668,641.0,641.0,2026-10-08,1,23,61,0.9252452580945075
-209,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1017322,641.0,641.0,2026-10-22,1,9,36,0.9258819928123875
-210,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1011330,632.0,632.0,2026-10-15,1,16,37,0.926509787417224
-211,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1020347,621.0,621.0,2026-10-26,1,5,43,0.9271266552172295
-212,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1013147,617.0,617.0,2026-10-17,1,14,58,0.92773954963366
-213,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1015752,615.0,615.0,2026-10-20,1,11,38,0.9283504573583031
-214,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1014634,609.0,609.0,2026-10-22,1,9,62,0.9289554050075838
-215,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1018965,602.0,602.0,2026-10-25,1,6,39,0.9295533992356084
-216,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1005024,598.0,598.0,2026-10-07,1,24,40,0.9301474200800581
-217,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1005616,591.0,591.0,2026-10-10,1,21,63,0.9307344875032517
-218,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1017055,585.0,585.0,2026-10-22,1,9,41,0.931315594851083
-219,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1012680,583.0,583.0,2026-10-16,1,15,44,0.9318947155071268
-220,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1021360,581.0,581.0,2026-10-28,1,3,59,0.9324718494713831
-221,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1012124,572.0,572.0,2026-10-16,1,15,60,0.9330400433225958
-222,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1006944,569.0,569.0,2026-10-09,1,22,61,0.9336052571361274
-223,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1016645,568.0,568.0,2026-10-22,1,9,42,0.9341694776037652
-224,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1002887,560.0,560.0,2026-10-04,1,27,45,0.9347257513042533
-225,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1008278,556.0,556.0,2026-10-11,1,20,62,0.9352780516211663
-226,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1010183,556.0,556.0,2026-10-13,1,18,43,0.9358303519380794
-227,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1010244,556.0,556.0,2026-10-18,1,13,64,0.9363826522549925
-228,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015519,555.0,555.0,2026-10-23,1,8,65,0.9369339592260119
-229,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1014078,547.0,547.0,2026-10-18,1,13,44,0.9374773194298814
-230,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1000935,545.0,545.0,2026-10-07,1,24,66,0.9380186929419635
-231,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1007406,540.0,540.0,2026-10-10,1,21,63,0.938555099724577
-232,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1005101,536.0,536.0,2026-10-07,1,24,64,0.9390875331236155
-233,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1006226,533.0,533.0,2026-10-08,1,23,45,0.9396169864849728
-234,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1007234,532.0,532.0,2026-10-09,1,22,46,0.9401454465004364
-235,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1016579,531.0,531.0,2026-10-24,1,7,67,0.9406729131700063
-236,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1015215,526.0,526.0,2026-10-20,1,11,46,0.9411954131101076
-237,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1008496,524.0,524.0,2026-10-11,1,20,47,0.9417159263584214
-238,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1010838,523.0,523.0,2026-10-16,1,15,68,0.9422354462608414
-239,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1010025,521.0,521.0,2026-10-19,1,12,69,0.9427529794714741
-240,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1002025,516.0,516.0,2026-10-03,1,28,48,0.943265545952638
-241,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1002284,515.0,515.0,2026-10-03,1,28,49,0.9437771190879082
-242,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1004135,512.0,512.0,2026-10-05,1,26,65,0.9442857121854973
-243,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020526,511.0,511.0,2026-10-28,1,3,70,0.9447933119371925
-244,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015539,506.5,506.5,2026-10-26,1,5,71,0.9452964416323661
-245,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017991,493.0,493.0,2026-10-29,1,2,72,0.9457861611579743
-246,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1018207,493.0,493.0,2026-10-24,1,7,47,0.9462758806835825
-247,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1022307,493.0,493.0,2026-10-29,1,2,50,0.9467656002091906
-248,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1003910,491.0,491.0,2026-10-11,1,20,73,0.9472533330430114
-249,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1017263,484.0,484.0,2026-10-22,1,9,66,0.947734112455576
-250,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1016378,481.0,481.0,2026-10-24,1,7,74,0.9482119118304595
-251,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1014275,480.0,480.0,2026-10-21,1,10,75,0.9486887178594493
-252,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1006659,477.0,477.0,2026-10-09,1,22,48,0.9491625438507578
-253,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1006806,476.0,476.0,2026-10-09,1,22,67,0.9496353764961726
-254,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1007739,471.0,471.0,2026-10-10,1,21,49,0.9501032424121187
-255,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1010218,467.0,467.0,2026-10-13,1,18,50,0.9505671349444901
-256,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1003777,466.0,466.0,2026-10-11,1,20,76,0.9510300341309675
-257,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1019157,462.0,462.0,2026-10-25,1,6,68,0.9514889599338702
-258,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1014527,458.0,458.0,2026-10-19,1,12,51,0.9519439123531979
-259,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1023500,457.0,457.0,2026-10-31,1,0,52,0.9523978714266319
-260,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1002941,455.0,455.0,2026-10-04,1,27,51,0.9528498438082784
-261,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1004444,455.0,455.0,2026-10-06,1,25,53,0.9533018161899248
-262,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020355,452.0,452.0,2026-10-28,1,3,77,0.9537508085338902
-263,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1001527,446.0,446.0,2026-10-02,1,29,69,0.9541938408024931
-264,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1000370,443.0,443.0,2026-10-01,1,30,52,0.954633893033415
-265,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013115,443.0,443.0,2026-10-22,1,9,78,0.9550739452643366
-266,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1010307,442.0,442.0,2026-10-13,1,18,53,0.9555130041493647
-267,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1000404,441.0,441.0,2026-10-01,1,30,70,0.9559510696884991
-268,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1007660,439.0,439.0,2026-10-10,1,21,71,0.9563871485358459
-269,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014316,434.0,434.0,2026-10-19,1,12,72,0.9568182606537241
-270,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1019382,433.0,433.0,2026-10-25,1,6,54,0.9572483794257086
-271,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015334,429.0,429.0,2026-10-24,1,7,79,0.9576745248141182
-272,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1022020,425.0,425.0,2026-10-31,1,0,80,0.9580966968189528
-273,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1000138,422.0,422.0,2026-10-05,1,26,81,0.9585158887861063
-274,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1018239,420.0,420.0,2026-10-24,1,7,55,0.9589330940614723
-275,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1011524,414.0,414.0,2026-10-15,1,16,56,0.9593443392614759
-276,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020565,404.5,404.5,2026-10-31,1,0,82,0.9597461476754892
-277,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1021018,403.0,403.0,2026-10-27,1,4,54,0.9601464660706618
-278,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015718,400.0,400.0,2026-10-22,1,9,83,0.9605438044281532
-279,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1021631,400.0,400.0,2026-10-28,1,3,55,0.9609411427856447
-280,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1006209,399.0,399.0,2026-10-08,1,23,56,0.9613374877972424
-281,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1008509,399.0,399.0,2026-10-17,1,14,84,0.9617338328088401
-282,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1003039,397.0,397.0,2026-10-04,1,27,57,0.9621281911286503
-283,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1009816,396.0,396.0,2026-10-18,1,13,85,0.9625215561025668
-284,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019749,396.0,396.0,2026-10-31,1,0,85,0.9629149210764834
-285,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1005267,386.0,386.0,2026-10-09,1,22,87,0.9632983525914626
-286,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014141,386.0,386.0,2026-10-18,1,13,73,0.9636817841064419
-287,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1003031,379.0,379.0,2026-10-04,1,27,74,0.964058262200165
-288,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019440,379.0,379.0,2026-10-31,1,0,88,0.9644347402938881
-289,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1006968,378.0,378.0,2026-10-13,1,18,89,0.9648102250417175
-290,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1018316,378.0,378.0,2026-10-24,1,7,57,0.965185709789547
-291,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1007851,376.0,376.0,2026-10-13,1,18,90,0.9655592078455889
-292,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1000610,374.0,374.0,2026-10-01,1,30,58,0.9659307192098434
-293,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1005582,371.0,371.0,2026-10-07,1,24,58,0.9662992505364167
-294,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1000908,370.0,370.0,2026-10-01,1,30,75,0.9666667885170963
-295,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020365,365.0,365.0,2026-10-31,1,0,91,0.9670293597683073
-296,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1013279,362.0,362.0,2026-10-17,1,14,59,0.967388950981837
-297,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1004014,361.0,361.0,2026-10-10,1,21,92,0.967747548849473
-298,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020119,356.0,356.0,2026-10-31,1,0,93,0.9681011799876404
-299,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015510,354.0,354.0,2026-10-26,1,5,94,0.9684528244340204
-300,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1008407,348.0,348.0,2026-10-11,1,20,60,0.9687985088050378
-301,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1008333,344.0,344.0,2026-10-14,1,17,95,0.9691402197924806
-302,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1009899,1740.0,343.0,2026-10-13,1,18,2,0.9694809374340294
-303,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1018685,339.0,339.0,2026-10-24,1,7,76,0.9698176816920034
-304,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1013238,337.0,337.0,2026-10-17,1,14,59,0.97015243925819
-305,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003157,1735.0,336.0,2026-10-04,1,27,3,0.9704862034784828
-306,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1022988,336.0,336.0,2026-10-30,1,1,60,0.9708199676987755
-307,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1007996,332.5,332.5,2026-10-16,1,15,96,0.9711502552084403
-308,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1021394,330.0,330.0,2026-10-28,1,3,61,0.9714780593533707
-309,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1013522,329.0,329.0,2026-10-17,1,14,62,0.9718048701524075
-310,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1004511,319.0,319.0,2026-10-11,1,20,97,0.9721217474925069
-311,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1008383,317.0,317.0,2026-10-11,1,20,77,0.9724366381408188
-312,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1017584,317.0,317.0,2026-10-23,1,8,63,0.9727515287891308
-313,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012694,310.0,310.0,2026-10-20,1,11,98,0.9730594660161866
-314,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1012334,309.0,309.0,2026-10-16,1,15,64,0.9733664098973488
-315,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1001914,307.0,307.0,2026-10-03,1,28,78,0.9736713670867235
-316,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1014293,307.0,307.0,2026-10-18,1,13,61,0.9739763242760981
-317,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012785,305.0,305.0,2026-10-21,1,10,99,0.9742792947736854
-318,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1006966,304.0,304.0,2026-10-10,1,21,100,0.9745812719253789
-319,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1015323,304.0,304.0,2026-10-20,1,11,79,0.9748832490770724
-320,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1003238,303.0,303.0,2026-10-04,1,27,65,0.9751842328828721
-321,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1006512,303.0,303.0,2026-10-09,1,22,65,0.9754852166886719
-322,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1019174,299.0,299.0,2026-10-25,1,6,80,0.9757822271108968
-323,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1010382,297.0,297.0,2026-10-13,1,18,62,0.9760772508413341
-324,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1016569,3159.0,292.0,2026-10-21,1,10,4,0.976367307842303
-325,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1010258,290.0,290.0,2026-10-13,1,18,67,0.9766553781514842
-326,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1021857,290.0,290.0,2026-10-28,1,3,81,0.9769434484606655
-327,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1022311,290.0,290.0,2026-10-29,1,2,63,0.9772315187698468
-328,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1023949,290.0,290.0,2026-10-31,1,0,63,0.9775195890790281
-329,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017086,287.0,287.0,2026-10-26,1,5,101,0.9778046793505282
-330,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1000822,286.0,286.0,2026-10-04,1,27,102,0.9780887762761346
-331,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1003192,286.0,286.0,2026-10-08,1,23,102,0.9783728732017409
-332,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020603,286.0,286.0,2026-10-29,1,2,102,0.9786569701273473
-333,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017916,280.0,280.0,2026-10-28,1,3,105,0.9789351069775913
-334,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021761,1553.0,280.0,2026-10-28,1,3,5,0.9792132438278354
-335,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1009177,277.0,277.0,2026-10-17,1,14,106,0.9794884006403982
-336,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012740,275.5,275.5,2026-10-20,1,11,107,0.9797620674341204
-337,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1002113,274.0,274.0,2026-10-03,1,28,82,0.9800342442090021
-338,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1001361,272.0,272.0,2026-10-02,1,29,68,0.9803044342920962
-339,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1007620,258.5,258.5,2026-10-11,1,20,108,0.980561214205625
-340,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1019771,256.0,256.0,2026-10-26,1,5,69,0.9808155107544196
-341,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1007698,255.0,255.0,2026-10-10,1,21,83,0.9810688139573204
-342,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1023241,255.0,255.0,2026-10-30,1,1,83,0.9813221171602212
-343,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1022068,254.0,254.0,2026-10-29,1,2,85,0.9815744270172282
-344,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1022335,254.0,254.0,2026-10-29,1,2,65,0.9818267368742353
-345,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1010786,4018.0,250.0,2026-10-14,1,17,6,0.9820750733476674
-346,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017646,249.0,249.0,2026-10-27,1,4,109,0.9823224164752059
-347,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020316,246.0,246.0,2026-10-29,1,2,110,0.9825667795650631
-348,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017698,245.0,245.0,2026-10-27,1,4,111,0.9828101493090267
-349,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1009592,244.0,244.0,2026-10-12,1,19,66,0.9830525257070963
-350,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1011889,244.0,244.0,2026-10-21,1,10,112,0.9832949021051661
-351,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1012230,243.0,243.0,2026-10-16,1,15,86,0.9835362851573423
-352,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014700,240.0,240.0,2026-10-19,1,12,87,0.9837746881718371
-353,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1008366,238.0,238.0,2026-10-11,1,20,70,0.9840111044945444
-354,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1014425,1300.0,236.0,2026-10-19,1,12,7,0.9842455341254644
-355,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1012709,233.0,233.0,2026-10-16,1,15,88,0.9844769837187032
-356,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1010414,231.0,231.0,2026-10-15,1,16,113,0.9847064466201545
-357,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1018819,229.0,229.0,2026-10-30,1,1,114,0.9849339228298184
-358,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012357,228.0,228.0,2026-10-20,1,11,115,0.9851604056935884
-359,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013910,228.0,228.0,2026-10-24,1,7,115,0.9853868885573586
-360,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1018729,228.0,228.0,2026-10-25,1,6,115,0.9856133714211287
-361,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1004282,227.5,227.5,2026-10-08,1,23,118,0.985839357611952
-362,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1004153,1695.0,215.0,2026-10-05,1,26,8,0.9860529269791036
-363,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1014045,215.0,215.0,2026-10-18,1,13,71,0.9862664963462553
-364,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1006763,1339.0,212.0,2026-10-09,1,22,9,0.9864770856757258
-365,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021945,1630.0,204.0,2026-10-28,1,3,10,0.9866797282380464
-366,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015847,201.5,201.5,2026-10-26,1,5,119,0.9868798874356327
-367,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1006523,1200.0,200.0,2026-10-09,1,22,11,0.9870785566143784
-368,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1014609,200.0,200.0,2026-10-19,1,12,67,0.9872772257931242
-369,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1021170,199.0,199.0,2026-10-31,1,0,120,0.9874749016259761
-370,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015992,198.0,198.0,2026-10-22,1,9,121,0.9876715841129343
-371,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1011042,195.0,195.0,2026-10-14,1,17,72,0.9878652865622114
-372,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1011298,1410.0,195.0,2026-10-15,1,16,12,0.9880589890114885
-373,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1020641,194.0,194.0,2026-10-27,1,4,73,0.9882516981148719
-374,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1004669,1081.0,193.0,2026-10-06,1,25,13,0.9884434138723615
-375,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1004087,1150.0,188.0,2026-10-05,1,26,14,0.9886301629003824
-376,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1004310,187.0,187.0,2026-10-12,1,19,122,0.9888159185825097
-377,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014181,185.0,185.0,2026-10-18,1,13,89,0.9889996875728495
-378,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1001498,183.0,183.0,2026-10-02,1,29,68,0.9891814698714019
-379,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1005425,1789.0,179.0,2026-10-07,1,24,15,0.9893592787863793
-380,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1014159,174.0,174.0,2026-10-18,1,13,74,0.989532120971888
-381,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1005289,173.0,173.0,2026-10-07,1,24,75,0.9897039698115031
-382,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1020875,172.0,172.0,2026-10-27,1,4,90,0.9898748253052244
-383,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002245,969.0,171.0,2026-10-03,1,28,16,0.990044687453052
-384,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1001155,1037.0,170.0,2026-10-02,1,29,17,0.9902135562549859
-385,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1011948,168.0,168.0,2026-10-15,1,16,91,0.9903804383651322
-386,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1018855,167.0,167.0,2026-10-29,1,2,123,0.990546327129385
-387,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013354,165.5,165.5,2026-10-23,1,8,124,0.990710725874797
-388,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1023899,1931.0,165.0,2026-10-31,1,0,18,0.9908746279472622
-389,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003635,2055.0,162.0,2026-10-05,1,26,19,0.9910355499820462
-390,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018475,815.0,161.0,2026-10-24,1,7,20,0.9911954786709366
-391,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1017375,160.0,160.0,2026-10-23,1,8,92,0.9913544140139331
-392,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1002173,159.0,159.0,2026-10-03,1,28,76,0.991512356011036
-393,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002281,873.0,159.0,2026-10-03,1,28,21,0.9916702980081389
-394,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1023552,1317.0,158.0,2026-10-31,1,0,22,0.991827246659348
-395,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1021581,156.0,156.0,2026-10-28,1,3,69,0.9919822086187696
-396,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1013497,152.0,152.0,2026-10-17,1,14,93,0.9921331971946163
-397,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1011266,805.0,151.0,2026-10-15,1,16,23,0.9922831924245694
-398,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1024126,1797.0,151.0,2026-10-31,1,0,23,0.9924331876545224
-399,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1010134,149.0,149.0,2026-10-19,1,12,125,0.9925811961926879
-400,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019136,149.0,149.0,2026-10-28,1,3,125,0.9927292047308536
-401,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1004236,148.0,148.0,2026-10-09,1,22,127,0.9928762199231254
-402,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1009030,1424.0,145.0,2026-10-12,1,19,25,0.993020255077716
-403,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020536,1113.0,144.0,2026-10-27,1,4,26,0.9931632968864129
-404,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1016816,899.0,143.0,2026-10-22,1,9,27,0.9933053453492161
-405,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1007909,142.0,142.0,2026-10-16,1,15,128,0.9934464004661255
-406,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1009210,137.0,137.0,2026-10-12,1,19,77,0.9935824888535664
-407,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018764,1601.0,135.0,2026-10-24,1,7,28,0.9937165905492198
-408,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020439,1148.0,134.0,2026-10-26,1,5,29,0.9938496988989793
-409,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1007580,133.0,133.0,2026-10-15,1,16,129,0.9939818139028452
-410,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1015053,1705.0,130.0,2026-10-20,1,11,30,0.99411094886903
-411,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1019370,1007.0,125.0,2026-10-25,1,6,31,0.9942351171057461
-412,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1003295,124.0,124.0,2026-10-04,1,27,70,0.9943582919965684
-413,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1006207,783.0,124.0,2026-10-08,1,23,32,0.9944814668873908
-414,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1008210,723.0,124.0,2026-10-11,1,20,32,0.9946046417782132
-415,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1014473,1145.0,120.0,2026-10-19,1,12,34,0.9947238432854606
-416,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1009383,616.0,118.0,2026-10-12,1,19,35,0.9948410581009205
-417,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1010232,661.0,118.0,2026-10-13,1,18,35,0.9949582729163805
-418,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020466,1224.0,117.0,2026-10-26,1,5,37,0.9950744943859468
-419,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018214,723.0,115.0,2026-10-24,1,7,38,0.9951887291637256
-420,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1015381,850.0,114.0,2026-10-20,1,11,39,0.9953019705956105
-421,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1012620,108.0,108.0,2026-10-16,1,15,94,0.9954092519521333
-422,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1005776,106.0,106.0,2026-10-11,1,20,130,0.9955145466168686
-423,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021132,905.0,106.0,2026-10-27,1,4,40,0.9956198412816037
-424,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1022373,812.0,106.0,2026-10-29,1,2,40,0.9957251359463389
-425,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002768,928.0,105.0,2026-10-04,1,27,42,0.9958294372651805
-426,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1013374,1530.0,105.0,2026-10-17,1,14,42,0.995933738584022
-427,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1019682,732.0,100.0,2026-10-25,1,6,44,0.9960330731733948
-428,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1010496,99.0,99.0,2026-10-14,1,17,71,0.996131414416874
-429,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013524,99.0,99.0,2026-10-23,1,8,131,0.9962297556603531
-430,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1008392,806.0,98.0,2026-10-11,1,20,45,0.9963271035579385
-431,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1022949,781.0,96.0,2026-10-30,1,1,46,0.9964224647637364
-432,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1024001,482.0,96.0,2026-10-31,1,0,46,0.9965178259695344
-433,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1001978,524.0,94.0,2026-10-03,1,28,48,0.9966112004835449
-434,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1012315,531.0,92.0,2026-10-16,1,15,49,0.996702588305768
-435,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003110,1093.0,89.0,2026-10-04,1,27,50,0.9967909960903097
-436,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012313,89.0,89.0,2026-10-18,1,13,132,0.9968794038748516
-437,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003379,693.0,86.0,2026-10-04,1,27,51,0.9969648316217122
-438,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020531,84.5,84.5,2026-10-31,1,0,133,0.9970487693497323
-439,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018063,467.0,83.0,2026-10-23,1,8,52,0.9971312170589118
-440,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020610,668.0,80.0,2026-10-27,1,4,53,0.9972106847304101
-441,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002427,405.0,79.0,2026-10-03,1,28,54,0.9972891590560147
-442,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1013519,632.0,79.0,2026-10-17,1,14,54,0.9973676333816193
-443,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1005653,440.0,78.0,2026-10-07,1,24,56,0.9974451143613301
-444,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020333,819.0,78.0,2026-10-26,1,5,56,0.9975225953410409
-445,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018119,429.0,76.0,2026-10-23,1,8,58,0.9975980896289642
-446,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1024023,1323.0,76.0,2026-10-31,1,0,58,0.9976735839168877
-447,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1005698,645.0,75.0,2026-10-07,1,24,60,0.9977480848589173
-448,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021664,389.0,74.0,2026-10-28,1,3,61,0.9978215924550532
-449,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020582,587.0,72.0,2026-10-27,1,4,62,0.9978931133594017
-450,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1017608,510.0,68.0,2026-10-23,1,8,63,0.9979606608801752
-451,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018141,976.0,68.0,2026-10-23,1,8,63,0.9980282084009487
-452,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1022511,372.0,67.0,2026-10-29,1,2,65,0.9980947625758285
-453,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021331,514.0,66.0,2026-10-28,1,3,66,0.9981603234048146
-454,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1017050,490.0,65.0,2026-10-22,1,9,67,0.998224890887907
-455,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002583,375.0,63.0,2026-10-03,1,28,68,0.998287471679212
-456,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1005052,506.0,62.0,2026-10-07,1,24,69,0.998349059124623
-457,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1009193,719.0,61.0,2026-10-12,1,19,70,0.9984096532241405
-458,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1013455,826.0,60.0,2026-10-17,1,14,71,0.9984692539777642
-459,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1006225,333.0,59.0,2026-10-08,1,23,72,0.9985278613854942
-460,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018640,1030.0,59.0,2026-10-24,1,7,72,0.9985864687932242
-461,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1012861,897.0,58.0,2026-10-17,1,14,74,0.9986440828550605
-462,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1009673,799.0,56.0,2026-10-13,1,18,75,0.9986997102251093
-463,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018857,794.0,56.0,2026-10-24,1,7,75,0.9987553375951581
-464,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1008695,676.0,55.0,2026-10-11,1,20,77,0.9988099716193132
-465,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020988,372.0,54.0,2026-10-27,1,4,78,0.9988636122975745
-466,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1012612,391.0,53.0,2026-10-16,1,15,79,0.9989162596299421
-467,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1000679,823.0,52.0,2026-10-01,1,30,80,0.998967913616416
-468,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1014569,863.0,51.0,2026-10-19,1,12,81,0.9990185742569961
-469,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002310,765.0,47.0,2026-10-03,1,28,82,0.9990652615140014
-470,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1016990,377.0,46.0,2026-10-22,1,9,83,0.9991109554251129
-471,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1023484,451.0,46.0,2026-10-30,1,1,83,0.9991566493362244
-472,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002186,557.0,43.0,2026-10-03,1,28,85,0.9991993632096547
-473,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1011360,482.0,43.0,2026-10-15,1,16,85,0.9992420770830851
-474,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1014655,405.0,43.0,2026-10-19,1,12,85,0.9992847909565155
-475,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1015377,454.0,43.0,2026-10-20,1,11,85,0.9993275048299457
-476,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021671,592.0,43.0,2026-10-28,1,3,85,0.9993702187033761
-477,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1011413,295.0,42.0,2026-10-15,1,16,90,0.9994119392309126
-478,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018905,552.0,41.0,2026-10-24,1,7,91,0.9994526664125556
-479,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1005434,450.0,35.0,2026-10-07,1,24,92,0.9994874335188361
-480,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1016254,273.0,35.0,2026-10-21,1,10,92,0.9995222006251165
-481,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003622,466.0,31.0,2026-10-05,1,26,94,0.9995529943478221
-482,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1000895,389.0,30.0,2026-10-01,1,30,95,0.999582794724634
-483,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1006245,211.0,30.0,2026-10-08,1,23,95,0.9996125951014458
-484,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002743,229.0,29.0,2026-10-04,1,27,97,0.999641402132364
-485,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1019892,306.0,29.0,2026-10-26,1,5,97,0.9996702091632821
-486,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020979,502.0,27.0,2026-10-27,1,4,99,0.9996970295024128
-487,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002500,428.0,26.0,2026-10-03,1,28,100,0.9997228564956497
-488,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020916,369.0,26.0,2026-10-27,1,4,100,0.9997486834888867
-489,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1005994,289.0,25.0,2026-10-08,1,23,102,0.9997735171362299
-490,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1007143,189.0,24.0,2026-10-09,1,22,103,0.9997973574376794
-491,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018295,184.0,24.0,2026-10-24,1,7,103,0.9998211977391288
-492,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003442,204.0,23.0,2026-10-05,1,26,105,0.9998440446946846
-493,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1011908,422.0,22.0,2026-10-15,1,16,106,0.9998658983043467
-494,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021187,314.0,21.0,2026-10-27,1,4,107,0.9998867585681149
-495,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1010528,238.0,18.0,2026-10-14,1,17,108,0.9999046387942021
-496,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1014440,332.0,18.0,2026-10-19,1,12,108,0.9999225190202892
-497,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1017390,99.0,18.0,2026-10-23,1,8,108,0.9999403992463762
-498,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1013197,130.0,17.0,2026-10-17,1,14,111,0.9999572861265696
-499,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1008150,266.0,16.0,2026-10-11,1,20,112,0.9999731796608693
-500,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1022907,99.0,14.0,2026-10-30,1,1,113,0.9999870865033815
-501,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1012844,157.0,13.0,2026-10-17,1,14,114,1.0
-502,L2,FEE_ABOVE_CONTRACT,claim,Treasury / vendor manager,"Raise a refund claim with PayFlux, attach fee_audit extract",Wallet,3445.1500000000024,3445.1500000000024,2026-10-15,1308,16,1,1.0
-503,L2,FEE_ABOVE_CONTRACT,claim,Treasury / vendor manager,"Raise a refund claim with PayFlux, attach fee_audit extract",Card,508.0099999999997,508.0099999999997,2026-10-02,87,29,2,1.0
-504,L3,SETTLEMENT_IN_TRANSIT,timing,Treasury,Confirm credit in November statement,setl_20261031,664381.6,664381.6,2026-11-02,1,-2,1,1.0
-505,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000316,7178.0,7178.0,2026-10-01,1,30,1,1.0
-506,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024229,3678.0,3678.0,2026-11-01,1,-1,2,1.0
-507,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000351,2793.0,2793.0,2026-10-01,1,30,3,1.0
-508,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000334,2499.0,2499.0,2026-10-01,1,30,4,1.0
-509,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024248,2454.0,2454.0,2026-11-01,1,-1,5,1.0
-510,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000361,2213.0,2213.0,2026-10-01,1,30,6,1.0
-511,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024234,2178.0,2178.0,2026-11-01,1,-1,7,1.0
-512,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000321,2131.0,2131.0,2026-10-01,1,30,8,1.0
-513,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024272,2088.0,2088.0,2026-11-01,1,-1,9,1.0
-514,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000363,2085.0,2085.0,2026-10-01,1,30,10,1.0
-515,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000326,2037.0,2037.0,2026-10-01,1,30,11,1.0
-516,L1,CUTOFF_TIMING,timing,Finance (AR),Raise the credit note against the order,ORD-1023240,2027.0,2027.0,2026-11-01,1,-1,12,1.0
-517,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024278,2004.0,2004.0,2026-11-01,1,-1,13,1.0
-518,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024258,1741.0,1741.0,2026-11-01,1,-1,14,1.0
-519,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000319,1702.0,1702.0,2026-10-01,1,30,15,1.0
-520,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024254,1641.0,1641.0,2026-11-01,1,-1,16,1.0
-521,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000350,1621.0,1621.0,2026-10-01,1,30,17,1.0
-522,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000323,1586.0,1586.0,2026-10-01,1,30,18,1.0
-523,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024232,1543.0,1543.0,2026-11-01,1,-1,19,1.0
-524,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024239,1537.0,1537.0,2026-11-01,1,-1,20,1.0
-525,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000364,1446.0,1446.0,2026-10-01,1,30,21,1.0
-526,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024243,1369.0,1369.0,2026-11-01,1,-1,22,1.0
-527,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024268,1353.0,1353.0,2026-11-01,1,-1,23,1.0
-528,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000359,1329.0,1329.0,2026-10-01,1,30,24,1.0
-529,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000318,1313.0,1313.0,2026-10-01,1,30,25,1.0
-530,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024276,1293.0,1293.0,2026-11-01,1,-1,26,1.0
-531,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024265,1266.0,1266.0,2026-11-01,1,-1,27,1.0
-532,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024262,1248.0,1248.0,2026-11-01,1,-1,28,1.0
-533,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024253,1195.0,1195.0,2026-11-01,1,-1,29,1.0
-534,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000331,1183.0,1183.0,2026-10-01,1,30,30,1.0
-535,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000310,1155.0,1155.0,2026-10-01,1,30,31,1.0
-536,L1,CUTOFF_TIMING,timing,Finance (AR),Raise the credit note against the order,ORD-1020856,1134.0,1134.0,2026-11-01,1,-1,32,1.0
-537,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024247,1118.0,1118.0,2026-11-01,1,-1,33,1.0
-538,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024250,1109.0,1109.0,2026-11-01,1,-1,34,1.0
-539,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024260,1109.0,1109.0,2026-11-01,1,-1,34,1.0
-540,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000349,1085.0,1085.0,2026-10-01,1,30,36,1.0
-541,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000344,1083.0,1083.0,2026-10-01,1,30,37,1.0
-542,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024264,1069.0,1069.0,2026-11-01,1,-1,38,1.0
-543,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000347,1041.0,1041.0,2026-10-01,1,30,39,1.0
-544,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000342,1031.0,1031.0,2026-10-01,1,30,40,1.0
-545,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000322,1014.0,1014.0,2026-10-01,1,30,41,1.0
-546,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024242,948.0,948.0,2026-11-01,1,-1,42,1.0
-547,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000335,947.0,947.0,2026-10-01,1,30,43,1.0
-548,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024261,940.0,940.0,2026-11-01,1,-1,44,1.0
-549,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000360,926.0,926.0,2026-10-01,1,30,45,1.0
-550,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000312,902.0,902.0,2026-10-01,1,30,46,1.0
-551,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000332,902.0,902.0,2026-10-01,1,30,46,1.0
-552,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000309,897.0,897.0,2026-10-01,1,30,48,1.0
-553,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000328,897.0,897.0,2026-10-01,1,30,48,1.0
-554,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000348,891.0,891.0,2026-10-01,1,30,50,1.0
-555,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000325,845.0,845.0,2026-10-01,1,30,51,1.0
-556,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024269,840.0,840.0,2026-11-01,1,-1,52,1.0
-557,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000324,810.0,810.0,2026-10-01,1,30,53,1.0
-558,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024246,805.0,805.0,2026-11-01,1,-1,54,1.0
-559,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000306,792.0,792.0,2026-10-01,1,30,55,1.0
-560,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024263,781.0,781.0,2026-11-01,1,-1,56,1.0
-561,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000330,776.0,776.0,2026-10-01,1,30,57,1.0
-562,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000308,767.0,767.0,2026-10-01,1,30,58,1.0
-563,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000329,752.0,752.0,2026-10-01,1,30,59,1.0
-564,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000352,752.0,752.0,2026-10-01,1,30,59,1.0
-565,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000357,718.0,718.0,2026-10-01,1,30,61,1.0
-566,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000337,714.0,714.0,2026-10-01,1,30,62,1.0
-567,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000338,712.0,712.0,2026-10-01,1,30,63,1.0
-568,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024231,706.0,706.0,2026-11-01,1,-1,64,1.0
-569,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024233,702.0,702.0,2026-11-01,1,-1,65,1.0
-570,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000317,692.0,692.0,2026-10-01,1,30,66,1.0
-571,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024249,680.0,680.0,2026-11-01,1,-1,67,1.0
-572,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000333,669.0,669.0,2026-10-01,1,30,68,1.0
-573,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024256,666.0,666.0,2026-11-01,1,-1,69,1.0
-574,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024245,652.0,652.0,2026-11-01,1,-1,70,1.0
-575,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000341,650.0,650.0,2026-10-01,1,30,71,1.0
-576,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000354,647.0,647.0,2026-10-01,1,30,72,1.0
-577,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000307,638.0,638.0,2026-10-01,1,30,73,1.0
-578,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024238,633.0,633.0,2026-11-01,1,-1,74,1.0
-579,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024267,628.0,628.0,2026-11-01,1,-1,75,1.0
-580,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024241,612.0,612.0,2026-11-01,1,-1,76,1.0
-581,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000345,605.0,605.0,2026-10-01,1,30,77,1.0
-582,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024252,589.0,589.0,2026-11-01,1,-1,78,1.0
-583,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000305,579.0,579.0,2026-10-01,1,30,79,1.0
-584,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000353,577.0,577.0,2026-10-01,1,30,80,1.0
-585,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000320,554.0,554.0,2026-10-01,1,30,81,1.0
-586,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000355,543.0,543.0,2026-10-01,1,30,82,1.0
-587,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000340,506.0,506.0,2026-10-01,1,30,83,1.0
-588,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024273,502.0,502.0,2026-11-01,1,-1,84,1.0
-589,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000311,494.0,494.0,2026-10-01,1,30,85,1.0
-590,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000315,493.0,493.0,2026-10-01,1,30,86,1.0
-591,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000327,485.0,485.0,2026-10-01,1,30,87,1.0
-592,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024257,485.0,485.0,2026-11-01,1,-1,87,1.0
-593,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024237,482.0,482.0,2026-11-01,1,-1,89,1.0
-594,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024275,471.0,471.0,2026-11-01,1,-1,90,1.0
-595,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000356,470.0,470.0,2026-10-01,1,30,91,1.0
-596,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000339,468.0,468.0,2026-10-01,1,30,92,1.0
-597,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024277,465.0,465.0,2026-11-01,1,-1,93,1.0
-598,L1,CUTOFF_TIMING,timing,Finance (AR),Raise the credit note against the order,ORD-1022641,462.5,462.5,2026-11-01,1,-1,94,1.0
-599,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024244,454.0,454.0,2026-11-01,1,-1,95,1.0
-600,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024266,440.0,440.0,2026-11-01,1,-1,96,1.0
-601,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000336,439.0,439.0,2026-10-01,1,30,97,1.0
-602,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024236,406.0,406.0,2026-11-01,1,-1,98,1.0
-603,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000304,377.0,377.0,2026-10-01,1,30,99,1.0
-604,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000362,372.0,372.0,2026-10-01,1,30,100,1.0
-605,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000346,312.0,312.0,2026-10-01,1,30,101,1.0
-606,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000343,303.0,303.0,2026-10-01,1,30,102,1.0
-607,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024230,300.0,300.0,2026-11-01,1,-1,103,1.0
-608,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000313,289.0,289.0,2026-10-01,1,30,104,1.0
-609,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024235,250.0,250.0,2026-11-01,1,-1,105,1.0
-610,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000303,226.0,226.0,2026-10-01,1,30,106,1.0
-611,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000358,225.0,225.0,2026-10-01,1,30,107,1.0
-612,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024271,224.0,224.0,2026-11-01,1,-1,108,1.0
-613,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024259,219.0,219.0,2026-11-01,1,-1,109,1.0
-614,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000314,209.0,209.0,2026-10-01,1,30,110,1.0
-615,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024255,195.0,195.0,2026-11-01,1,-1,111,1.0
-616,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024251,158.0,158.0,2026-11-01,1,-1,112,1.0
-617,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024270,155.0,155.0,2026-11-01,1,-1,113,1.0
-618,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024240,140.0,140.0,2026-11-01,1,-1,114,1.0
-619,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024274,135.0,135.0,2026-11-01,1,-1,115,1.0
+1,L3,SETTLEMENT_OVERDUE,break,Treasury,Escalate to PayFlux; book as receivable from gateway,setl_20261019,641741.68,641741.68,2026-10-20,1,11,1,0.6453880060644229
+2,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1013302,6568.0,6568.0,2026-10-17,1,14,1,0.6519933249270393
+3,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1010831,6143.0,6143.0,2026-10-14,1,17,2,0.6581712289728755
+4,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261019,5470.0,5470.0,2026-10-19,1,12,1,0.6636723090853164
+5,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261027,5164.0,5164.0,2026-10-27,1,4,2,0.6688656505296756
+6,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1011291,4487.0,4487.0,2026-10-19,1,12,1,0.673378145312952
+7,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1001885,4477.0,4477.0,2026-10-03,1,28,3,0.6778805832770102
+8,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1017898,4371.0,4371.0,2026-10-23,1,8,4,0.6822764189573537
+9,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1015217,3835.0,3835.0,2026-10-20,1,11,1,0.6861332091275932
+10,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012254,3518.0,3518.0,2026-10-21,1,10,2,0.689671198128611
+11,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1006433,3103.0,3103.0,2026-10-08,1,23,1,0.6927918291320669
+12,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1000450,2940.0,2940.0,2026-10-01,1,30,5,0.6957485339822637
+13,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1018774,2895.0,2895.0,2026-10-25,1,6,3,0.6986599831459778
+14,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1018282,2857.0,2857.0,2026-10-24,1,7,6,0.7015332163966622
+15,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261014,2816.0,2816.0,2026-10-14,1,17,3,0.7043652166885513
+16,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019826,2769.0,2769.0,2026-10-29,1,2,4,0.7071499499301142
+17,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1016108,2750.0,2750.0,2026-10-21,1,10,7,0.7099155752151621
+18,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015566,2663.0,2663.0,2026-10-23,1,8,5,0.7125937061730104
+19,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261009,2601.0,2601.0,2026-10-09,1,22,4,0.7152094848517049
+20,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1005701,2536.0,2536.0,2026-10-11,1,20,6,0.71775989420548
+21,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1009455,2515.0,2515.0,2026-10-12,1,19,2,0.7202891842388967
+22,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1016406,2492.0,2492.0,2026-10-25,1,6,7,0.722795343588111
+23,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017576,2433.0,2433.0,2026-10-27,1,4,8,0.7252421677039371
+24,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1008995,2340.0,2340.0,2026-10-12,1,19,8,0.7275954634010324
+25,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261012,2337.0,2337.0,2026-10-12,1,19,5,0.7299457420523623
+26,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261020,2311.0,2311.0,2026-10-20,1,11,6,0.7322698729737244
+27,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1010489,2246.0,2246.0,2026-10-14,1,17,9,0.7345286345701673
+28,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1003019,2108.0,2108.0,2026-10-04,1,27,2,0.7366486120613968
+29,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1018296,2073.0,2073.0,2026-10-24,1,7,10,0.738733390685362
+30,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1002057,2045.0,2045.0,2026-10-07,1,24,9,0.7407900102155158
+31,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1016629,1995.0,1995.0,2026-10-22,1,9,11,0.7427963456495779
+32,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1003032,1991.0,1991.0,2026-10-05,1,26,10,0.7447986583559526
+33,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019974,1930.0,1930.0,2026-10-29,1,2,11,0.7467396244650955
+34,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1022625,1914.0,1914.0,2026-10-29,1,2,3,0.7486644996634888
+35,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1008619,1883.0,1883.0,2026-10-11,1,20,4,0.7505581987223052
+36,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1020854,1867.0,1867.0,2026-10-27,1,4,3,0.7524358068703724
+37,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1016297,1856.0,1856.0,2026-10-21,1,10,12,0.7543023525172993
+38,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1011500,1849.0,1849.0,2026-10-15,1,16,13,0.7561618583907733
+39,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1007157,1834.0,1834.0,2026-10-09,1,22,4,0.75800627903542
+40,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1005995,1820.0,1820.0,2026-10-08,1,23,5,0.7598366201331608
+41,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1010204,1805.0,1805.0,2026-10-13,1,18,6,0.7616518760020741
+42,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1002471,1802.0,1802.0,2026-10-03,1,28,7,0.7634641148252218
+43,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1019750,1759.0,1759.0,2026-10-25,1,6,8,0.7652331093257307
+44,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1001805,1737.0,1737.0,2026-10-02,1,29,14,0.7669799788239592
+45,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1000482,1721.0,1721.0,2026-10-01,1,30,5,0.7687107574114384
+46,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1018616,1688.0,1688.0,2026-10-28,1,3,12,0.7704083484954969
+47,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1015503,1687.0,1687.0,2026-10-20,1,11,15,0.7721049338976336
+48,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1009005,1680.0,1680.0,2026-10-12,1,19,9,0.7737944795263174
+49,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1002031,1663.0,1663.0,2026-10-03,1,28,10,0.77546692856233
+50,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1002164,1659.0,1659.0,2026-10-07,1,24,13,0.7771353548706553
+51,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1022592,1599.0,1599.0,2026-10-29,1,2,16,0.7787434402636705
+52,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1009995,1577.0,1577.0,2026-10-13,1,18,17,0.7803294006544053
+53,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1013545,1566.0,1566.0,2026-10-18,1,13,6,0.7819042985439999
+54,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1005538,1541.0,1541.0,2026-10-07,1,24,11,0.7834540543855486
+55,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1011499,1535.0,1535.0,2026-10-19,1,12,14,0.7849977761355662
+56,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013933,1523.5,1523.5,2026-10-22,1,9,15,0.7865299325434828
+57,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1024051,1523.0,1523.0,2026-10-31,1,0,12,0.7880615861104385
+58,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1016035,1505.0,1505.0,2026-10-21,1,10,18,0.789575137402801
+59,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1016160,1479.0,1479.0,2026-10-27,1,4,16,0.791062540965196
+60,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1021288,1463.0,1463.0,2026-10-28,1,3,7,0.7925338536168415
+61,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1011736,1456.0,1456.0,2026-10-15,1,16,8,0.7939981264950342
+62,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013342,1429.0,1429.0,2026-10-19,1,12,17,0.7954352459613373
+63,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1010842,1398.0,1398.0,2026-10-14,1,17,13,0.7968411892880635
+64,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1022638,1393.0,1393.0,2026-10-29,1,2,14,0.7982421042051805
+65,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1017248,1383.0,1383.0,2026-10-22,1,9,9,0.7996329623030792
+66,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1005009,1366.0,1366.0,2026-10-07,1,24,19,0.8010067238083066
+67,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1004935,1362.0,1362.0,2026-10-06,1,25,10,0.8023764625858468
+68,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1009219,1351.0,1351.0,2026-10-12,1,19,20,0.8037351388622467
+69,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1008016,1349.0,1349.0,2026-10-10,1,21,11,0.8050918037748029
+70,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1013328,1347.0,1347.0,2026-10-17,1,14,12,0.8064464573235156
+71,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1010559,1345.0,1345.0,2026-10-14,1,17,21,0.8077990995083845
+72,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1000527,1343.0,1343.0,2026-10-04,1,27,18,0.8091497303294097
+73,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1019235,1337.0,1337.0,2026-10-25,1,6,22,0.8104943270589039
+74,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1023714,1327.0,1327.0,2026-10-31,1,0,15,0.8118288669691798
+75,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1024041,1285.0,1285.0,2026-10-31,1,0,23,0.8131211682387386
+76,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1012250,1284.0,1284.0,2026-10-16,1,15,16,0.8144124638263756
+77,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1004870,1262.0,1262.0,2026-10-06,1,25,24,0.8156816344117321
+78,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1015853,1258.0,1258.0,2026-10-21,1,10,13,0.8169467822694013
+79,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1008174,1239.0,1239.0,2026-10-11,1,20,14,0.8181928221705557
+80,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019240,1235.0,1235.0,2026-10-30,1,1,19,0.8194348393440226
+81,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1022750,1234.0,1234.0,2026-10-30,1,1,25,0.8206758508355678
+82,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1023936,1230.0,1230.0,2026-10-31,1,0,26,0.8219128395994256
+83,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1007800,1229.0,1229.0,2026-10-10,1,21,27,0.8231488226813616
+84,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1010007,1219.0,1219.0,2026-10-13,1,18,28,0.8243747489440792
+85,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1004104,1213.0,1213.0,2026-10-05,1,26,17,0.8255946411152658
+86,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1015003,1209.0,1209.0,2026-10-19,1,12,18,0.8268105105587651
+87,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1023733,1198.0,1198.0,2026-10-31,1,0,29,0.8280153175011242
+88,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012510,1194.0,1194.0,2026-10-21,1,10,20,0.829216101715796
+89,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014156,1194.0,1194.0,2026-10-18,1,13,30,0.8304168859304677
+90,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1018635,1177.0,1177.0,2026-10-24,1,7,19,0.8316005735524682
+91,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1024207,1174.0,1174.0,2026-10-31,1,0,15,0.8327812441287032
+92,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1011595,1161.0,1161.0,2026-10-19,1,12,21,0.8339488408399544
+93,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1003906,1147.0,1147.0,2026-10-05,1,26,20,0.8351023580042999
+94,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1009482,1137.0,1137.0,2026-10-17,1,14,22,0.836245818349427
+95,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1010239,1124.0,1124.0,2026-10-13,1,18,31,0.8373762048295702
+96,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1011678,1116.0,1116.0,2026-10-15,1,16,16,0.8384985458543388
+97,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1021277,1116.0,1116.0,2026-10-28,1,3,21,0.8396208868791073
+98,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012340,1107.0,1107.0,2026-10-22,1,9,23,0.8407341767665794
+99,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1017226,1098.0,1098.0,2026-10-22,1,9,32,0.8418384155167549
+100,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015702,1093.5,1093.5,2026-10-23,1,8,24,0.8429381286982821
+101,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1015833,1091.0,1091.0,2026-10-21,1,10,22,0.8440353276750048
+102,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012208,1073.0,1073.0,2026-10-20,1,11,25,0.8451144243771345
+103,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1009573,1063.0,1063.0,2026-10-14,1,17,26,0.8461834642600456
+104,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1018725,1056.0,1056.0,2026-10-24,1,7,17,0.8472454643695041
+105,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1020309,1051.0,1051.0,2026-10-26,1,5,33,0.8483024360693534
+106,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1023506,1048.0,1048.0,2026-10-31,1,0,34,0.849356390723437
+107,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1001356,1040.0,1040.0,2026-10-02,1,29,23,0.8504022999221461
+108,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1013617,1030.0,1030.0,2026-10-18,1,13,35,0.8514381523016369
+109,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012913,1020.0,1020.0,2026-10-23,1,8,27,0.8524639478619092
+110,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1014657,1017.0,1017.0,2026-10-21,1,10,28,0.853486726376416
+111,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1019170,1016.0,1016.0,2026-10-25,1,6,18,0.854508499209001
+112,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261024,1009.0,1009.0,2026-10-24,1,7,7,0.8555232322681332
+113,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1004025,1001.0,1001.0,2026-10-05,1,26,19,0.8565299198718906
+114,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1010548,1001.0,1001.0,2026-10-15,1,16,29,0.8575366074756481
+115,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1017457,996.0,996.0,2026-10-23,1,8,20,0.8585382666697964
+116,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1023640,993.0,993.0,2026-10-31,1,0,21,0.8595369088181791
+117,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1006662,992.0,992.0,2026-10-09,1,22,36,0.86053454528464
+118,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1001125,989.0,989.0,2026-10-02,1,29,24,0.8615291647053355
+119,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1010525,984.0,984.0,2026-10-14,1,17,22,0.8625187557164218
+120,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261016,984.0,984.0,2026-10-16,1,15,8,0.863508346727508
+121,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1008173,976.0,976.0,2026-10-11,1,20,37,0.8644898922832196
+122,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1005032,969.0,969.0,2026-10-12,1,19,30,0.8654643980654783
+123,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1021413,963.0,963.0,2026-10-28,1,3,38,0.866432869756206
+124,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1008652,948.0,948.0,2026-10-11,1,20,39,0.8673862562181062
+125,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012577,947.0,947.0,2026-10-19,1,12,31,0.8683386369980846
+126,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014990,944.0,944.0,2026-10-19,1,12,40,0.8692880007322974
+127,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1017169,943.0,943.0,2026-10-22,1,9,25,0.8702363587845884
+128,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1007283,939.0,939.0,2026-10-09,1,22,41,0.871180694109192
+129,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1017195,925.0,925.0,2026-10-22,1,9,42,0.87211094988689
+130,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1011671,922.0,922.0,2026-10-21,1,10,32,0.8730381886188224
+131,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1003240,914.0,914.0,2026-10-04,1,27,23,0.8739573818953802
+132,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1003480,904.0,904.0,2026-10-05,1,26,43,0.8748665183527196
+133,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1014015,902.0,902.0,2026-10-18,1,13,24,0.8757736434462153
+134,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261010,898.0,898.0,2026-10-10,1,21,9,0.8766767458120237
+135,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1020505,888.0,888.0,2026-10-27,1,4,26,0.8775697913586137
+136,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017463,879.0,879.0,2026-10-25,1,6,33,0.8784537857679072
+137,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1011939,876.0,876.0,2026-10-21,1,10,34,0.8793347631314352
+138,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1008721,875.0,875.0,2026-10-14,1,17,35,0.8802147348130415
+139,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1004883,864.0,864.0,2026-10-06,1,25,25,0.8810836439935074
+140,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261004,864.0,864.0,2026-10-04,1,27,10,0.8819525531739734
+141,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014973,859.0,859.0,2026-10-19,1,12,44,0.8828164339448302
+142,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1010770,858.0,858.0,2026-10-14,1,17,27,0.8836793090337651
+143,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1011607,856.0,856.0,2026-10-15,1,16,28,0.8845401727588564
+144,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1004325,851.0,851.0,2026-10-10,1,21,36,0.8853960080743386
+145,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1015182,838.0,838.0,2026-10-20,1,11,29,0.8862387695248368
+146,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1000836,833.0,833.0,2026-10-07,1,24,37,0.8870765025657259
+147,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019383,832.5,832.5,2026-10-30,1,1,38,0.8879137327656541
+148,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1009399,816.0,816.0,2026-10-12,1,19,30,0.8887343692138719
+149,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1017765,816.0,816.0,2026-10-23,1,8,26,0.8895550056620898
+150,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013378,815.0,815.0,2026-10-19,1,12,39,0.8903746364283859
+151,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1003152,813.0,813.0,2026-10-04,1,27,27,0.8911922558308382
+152,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1002916,811.0,811.0,2026-10-10,1,21,40,0.8920078638694469
+153,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1005829,810.0,810.0,2026-10-12,1,19,41,0.8928224662261337
+154,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013274,807.0,807.0,2026-10-21,1,10,42,0.8936340515370551
+155,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1022161,807.0,807.0,2026-10-29,1,2,31,0.8944456368479764
+156,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1006441,795.0,795.0,2026-10-08,1,23,45,0.8952451539758358
+157,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019368,792.5,792.5,2026-10-28,1,3,43,0.8960421568988904
+158,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1014970,781.0,781.0,2026-10-19,1,12,32,0.8968275944798442
+159,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1003958,776.0,776.0,2026-10-05,1,26,28,0.8976080036511885
+160,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1023535,771.0,771.0,2026-10-31,1,0,29,0.8983833844129239
+161,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1008519,770.5,770.5,2026-10-13,1,18,44,0.8991582623336982
+162,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1003338,769.0,769.0,2026-10-04,1,27,46,0.8999316317315897
+163,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1016532,767.0,767.0,2026-10-21,1,10,30,0.9007029897656377
+164,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1022460,766.0,766.0,2026-10-29,1,2,47,0.9014733421177638
+165,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1002987,763.0,763.0,2026-10-04,1,27,48,0.9022406774241244
+166,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1008701,762.0,762.0,2026-10-11,1,20,31,0.9030070070485631
+167,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1011205,761.0,761.0,2026-10-14,1,17,32,0.90377233099108
+168,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1001616,757.0,757.0,2026-10-06,1,25,45,0.9045336322059095
+169,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1021587,749.0,749.0,2026-10-28,1,3,49,0.9052868879653645
+170,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1006372,744.0,744.0,2026-10-08,1,23,50,0.9060351153152102
+171,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1009673,743.0,743.0,2026-10-17,1,14,46,0.906782336983134
+172,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1007520,736.0,736.0,2026-10-10,1,21,33,0.907522518877605
+173,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003355,4932.0,732.0,2026-10-04,1,27,1,0.9082586780443888
+174,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1013597,730.0,730.0,2026-10-18,1,13,34,0.9089928258473288
+175,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015221,726.0,726.0,2026-10-24,1,7,47,0.9097229509225814
+176,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1002131,725.0,725.0,2026-10-03,1,28,51,0.9104520703159122
+177,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1019312,723.0,723.0,2026-10-25,1,6,33,0.9111791783453994
+178,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012886,718.0,718.0,2026-10-22,1,9,48,0.9119012579652774
+179,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1006757,713.5,713.5,2026-10-13,1,18,49,0.9126188120165071
+180,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1023699,712.0,712.0,2026-10-31,1,0,35,0.9133348575448541
+181,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1007910,711.0,711.0,2026-10-13,1,18,50,0.9140498973912792
+182,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1022172,711.0,711.0,2026-10-29,1,2,36,0.9147649372377044
+183,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1001984,708.0,708.0,2026-10-03,1,28,37,0.915476960038364
+184,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1011033,698.0,698.0,2026-10-14,1,17,38,0.9161789260198052
+185,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1013616,697.0,697.0,2026-10-18,1,13,52,0.9168798863193246
+186,L2,CHARGEBACK_NOT_BOOKED,break,Finance (AR),Book the chargeback; contest with evidence within the gateway window,setl_20261028,696.0,696.0,2026-10-28,1,3,11,0.9175798409369222
+187,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1003831,687.0,687.0,2026-10-05,1,26,53,0.9182707444172233
+188,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1009109,686.0,686.0,2026-10-12,1,19,34,0.9189606422156026
+189,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1007749,683.0,683.0,2026-10-10,1,21,39,0.9196475229682163
+190,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1007056,681.0,681.0,2026-10-09,1,22,40,0.9203323923569864
+191,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1019022,680.0,680.0,2026-10-25,1,6,35,0.9210162560638345
+192,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012505,671.0,671.0,2026-10-18,1,13,51,0.9216910686333862
+193,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1023268,671.0,671.0,2026-10-30,1,1,41,0.9223658812029379
+194,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1020810,668.0,668.0,2026-10-27,1,4,42,0.9230376767267242
+195,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1015437,652.0,652.0,2026-10-20,1,11,54,0.923693381339761
+196,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1004801,649.0,649.0,2026-10-06,1,25,55,0.9243460689070323
+197,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1022701,649.0,649.0,2026-10-30,1,1,55,0.9249987564743036
+198,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1012908,647.0,647.0,2026-10-17,1,14,57,0.9256494326777313
+199,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1018950,643.0,643.0,2026-10-28,1,3,52,0.9262960861534716
+200,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1001668,641.0,641.0,2026-10-08,1,23,53,0.9269407282653682
+201,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1017322,641.0,641.0,2026-10-22,1,9,36,0.9275853703772649
+202,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1011330,632.0,632.0,2026-10-15,1,16,37,0.928220961351865
+203,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1020347,621.0,621.0,2026-10-26,1,5,43,0.9288454898253249
+204,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1013147,617.0,617.0,2026-10-17,1,14,58,0.9294659955710975
+205,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1015752,615.0,615.0,2026-10-20,1,11,38,0.9300844899530264
+206,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1014634,609.0,609.0,2026-10-22,1,9,54,0.9306969502434244
+207,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1018965,602.0,602.0,2026-10-25,1,6,39,0.9313023707603694
+208,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1005024,598.0,598.0,2026-10-07,1,24,40,0.9319037685496271
+209,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1005616,591.0,591.0,2026-10-10,1,21,55,0.932498126565432
+210,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1017055,585.0,585.0,2026-10-22,1,9,41,0.9330864504897057
+211,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1012680,583.0,583.0,2026-10-16,1,15,44,0.9336727630501359
+212,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1021360,581.0,581.0,2026-10-28,1,3,59,0.9342570642467224
+213,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1012124,572.0,572.0,2026-10-16,1,15,60,0.9348323143060124
+214,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1006944,569.0,569.0,2026-10-09,1,22,61,0.9354045473195368
+215,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1016645,568.0,568.0,2026-10-22,1,9,42,0.9359757746511395
+216,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1002887,560.0,560.0,2026-10-04,1,27,45,0.9365389565273674
+217,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1008278,556.0,556.0,2026-10-11,1,20,62,0.9370981156759081
+218,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1010183,556.0,556.0,2026-10-13,1,18,43,0.9376572748244487
+219,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1010244,556.0,556.0,2026-10-18,1,13,56,0.9382164339729893
+220,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015519,555.0,555.0,2026-10-23,1,8,57,0.9387745874396081
+221,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1014078,547.0,547.0,2026-10-18,1,13,44,0.9393246954508522
+222,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1000935,545.0,545.0,2026-10-07,1,24,58,0.9398727920982526
+223,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1007406,540.0,540.0,2026-10-10,1,21,63,0.9404158603360437
+224,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1005101,536.0,536.0,2026-10-07,1,24,64,0.9409549058461477
+225,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1006226,533.0,533.0,2026-10-08,1,23,45,0.941490934310486
+226,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1007234,532.0,532.0,2026-10-09,1,22,46,0.9420259570929026
+227,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1016579,531.0,531.0,2026-10-24,1,7,59,0.9425599741933973
+228,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1015215,526.0,526.0,2026-10-20,1,11,46,0.9430889628842829
+229,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1008496,524.0,524.0,2026-10-11,1,20,47,0.9436159402113248
+230,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1010838,523.0,523.0,2026-10-16,1,15,60,0.9441419118564448
+231,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1010025,521.0,521.0,2026-10-19,1,12,61,0.9446658721377211
+232,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1002025,516.0,516.0,2026-10-03,1,28,48,0.9451848040093883
+233,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1002284,515.0,515.0,2026-10-03,1,28,49,0.9457027301991336
+234,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1004135,512.0,512.0,2026-10-05,1,26,65,0.9462176393431135
+235,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020526,511.0,511.0,2026-10-28,1,3,62,0.9467315428051715
+236,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015539,506.5,506.5,2026-10-26,1,5,63,0.9472409206985812
+237,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017991,493.0,493.0,2026-10-29,1,2,64,0.9477367218860462
+238,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1018207,493.0,493.0,2026-10-24,1,7,47,0.9482325230735111
+239,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1022307,493.0,493.0,2026-10-29,1,2,50,0.9487283242609762
+240,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1003910,491.0,491.0,2026-10-11,1,20,65,0.9492221140845974
+241,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1017263,484.0,484.0,2026-10-22,1,9,66,0.9497088641347659
+242,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1016378,481.0,481.0,2026-10-24,1,7,66,0.9501925971391688
+243,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1014275,480.0,480.0,2026-10-21,1,10,67,0.9506753244616499
+244,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1006659,477.0,477.0,2026-10-09,1,22,48,0.9511550347383655
+245,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1006806,476.0,476.0,2026-10-09,1,22,67,0.9516337393331593
+246,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1007739,471.0,471.0,2026-10-10,1,21,49,0.9521074155183439
+247,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1010218,467.0,467.0,2026-10-13,1,18,50,0.952577068975841
+248,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1003777,466.0,466.0,2026-10-11,1,20,68,0.9530457167514165
+249,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1019157,462.0,462.0,2026-10-25,1,6,68,0.9535103417993045
+250,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1014527,458.0,458.0,2026-10-19,1,12,51,0.9539709441195052
+251,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1023500,457.0,457.0,2026-10-31,1,0,52,0.9544305407577841
+252,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1002941,455.0,455.0,2026-10-04,1,27,51,0.9548881260322194
+253,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1004444,455.0,455.0,2026-10-06,1,25,53,0.9553457113066546
+254,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020355,452.0,452.0,2026-10-28,1,3,69,0.9558002795353243
+255,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1001527,446.0,446.0,2026-10-02,1,29,69,0.956248813672463
+256,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1000370,443.0,443.0,2026-10-01,1,30,52,0.9566943307638361
+257,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013115,443.0,443.0,2026-10-22,1,9,70,0.9571398478552093
+258,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1010307,442.0,442.0,2026-10-13,1,18,53,0.9575843592646607
+259,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1000404,441.0,441.0,2026-10-01,1,30,70,0.9580278649921902
+260,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1007660,439.0,439.0,2026-10-10,1,21,71,0.9584693593558761
+261,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014316,434.0,434.0,2026-10-19,1,12,72,0.9589058253099527
+262,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1019382,433.0,433.0,2026-10-25,1,6,54,0.9593412855821075
+263,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015334,429.0,429.0,2026-10-24,1,7,71,0.959772723126575
+264,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1000138,422.0,422.0,2026-10-05,1,26,72,0.9601971208975896
+265,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1018239,420.0,420.0,2026-10-24,1,7,55,0.9606195073047605
+266,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1011524,414.0,414.0,2026-10-15,1,16,56,0.9610358596204005
+267,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1021018,403.0,403.0,2026-10-27,1,4,54,0.9614411494349003
+268,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015718,400.0,400.0,2026-10-22,1,9,73,0.9618434222036345
+269,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1021631,400.0,400.0,2026-10-28,1,3,55,0.9622456949723688
+270,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1006209,399.0,399.0,2026-10-08,1,23,56,0.9626469620591812
+271,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1008509,399.0,399.0,2026-10-17,1,14,74,0.9630482291459936
+272,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1003039,397.0,397.0,2026-10-04,1,27,57,0.9634474848689624
+273,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1009816,396.0,396.0,2026-10-18,1,13,75,0.9638457349100092
+274,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1005267,386.0,386.0,2026-10-09,1,22,76,0.9642339281318378
+275,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014141,386.0,386.0,2026-10-18,1,13,73,0.9646221213536664
+276,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1003031,379.0,379.0,2026-10-04,1,27,74,0.9650032748020421
+277,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1006968,378.0,378.0,2026-10-13,1,18,77,0.965383422568496
+278,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1018316,378.0,378.0,2026-10-24,1,7,57,0.9657635703349499
+279,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1007851,376.0,376.0,2026-10-13,1,18,78,0.9661417067375601
+280,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1000610,374.0,374.0,2026-10-01,1,30,58,0.9665178317763266
+281,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1005582,371.0,371.0,2026-10-07,1,24,58,0.9668909397693275
+282,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1000908,370.0,370.0,2026-10-01,1,30,75,0.9672630420804067
+283,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1013279,362.0,362.0,2026-10-17,1,14,59,0.9676270989361112
+284,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1004014,361.0,361.0,2026-10-10,1,21,79,0.9679901501098939
+285,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015510,354.0,354.0,2026-10-26,1,5,80,0.9683461615102237
+286,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1008407,348.0,348.0,2026-10-11,1,20,60,0.9686961388190225
+287,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1008333,344.0,344.0,2026-10-14,1,17,81,0.9690420934001339
+288,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1009899,1740.0,343.0,2026-10-13,1,18,2,0.9693870422993236
+289,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1018685,339.0,339.0,2026-10-24,1,7,76,0.9697279684708259
+290,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1013238,337.0,337.0,2026-10-17,1,14,59,0.9700668832784844
+291,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003157,1735.0,336.0,2026-10-04,1,27,3,0.9704047924042212
+292,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1022988,336.0,336.0,2026-10-30,1,1,60,0.970742701529958
+293,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1007996,332.5,332.5,2026-10-16,1,15,82,0.9710770907689683
+294,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1021394,330.0,330.0,2026-10-28,1,3,61,0.971408965803174
+295,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1013522,329.0,329.0,2026-10-17,1,14,62,0.971739835155458
+296,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1004511,319.0,319.0,2026-10-11,1,20,83,0.9720606476885236
+297,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1008383,317.0,317.0,2026-10-11,1,20,77,0.9723794488577455
+298,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1017584,317.0,317.0,2026-10-23,1,8,63,0.9726982500269674
+299,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012694,310.0,310.0,2026-10-20,1,11,84,0.9730100114227364
+300,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1012334,309.0,309.0,2026-10-16,1,15,64,0.9733207671365837
+301,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1001914,307.0,307.0,2026-10-03,1,28,78,0.9736295114865872
+302,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1014293,307.0,307.0,2026-10-18,1,13,61,0.9739382558365907
+303,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012785,305.0,305.0,2026-10-21,1,10,85,0.9742449888227506
+304,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1006966,304.0,304.0,2026-10-10,1,21,86,0.9745507161269886
+305,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1015323,304.0,304.0,2026-10-20,1,11,79,0.9748564434312266
+306,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1003238,303.0,303.0,2026-10-04,1,27,65,0.9751611650535428
+307,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1006512,303.0,303.0,2026-10-09,1,22,65,0.975465886675859
+308,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1019174,299.0,299.0,2026-10-25,1,6,80,0.9757665855704879
+309,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1010382,297.0,297.0,2026-10-13,1,18,62,0.976065273101273
+310,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1016569,3159.0,292.0,2026-10-21,1,10,4,0.9763589322224491
+311,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1010258,290.0,290.0,2026-10-13,1,18,67,0.9766505799797813
+312,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1021857,290.0,290.0,2026-10-28,1,3,81,0.9769422277371137
+313,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1022311,290.0,290.0,2026-10-29,1,2,63,0.9772338754944461
+314,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1023949,290.0,290.0,2026-10-31,1,0,63,0.9775255232517783
+315,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017086,287.0,287.0,2026-10-26,1,5,87,0.9778141539633451
+316,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1000822,286.0,286.0,2026-10-04,1,27,88,0.9781017789929902
+317,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1003192,286.0,286.0,2026-10-08,1,23,88,0.9783894040226352
+318,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020603,286.0,286.0,2026-10-29,1,2,88,0.9786770290522802
+319,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017916,280.0,280.0,2026-10-28,1,3,91,0.9789586199903941
+320,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021761,1553.0,280.0,2026-10-28,1,3,5,0.9792402109285081
+321,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1009177,277.0,277.0,2026-10-17,1,14,92,0.9795187848208565
+322,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012740,275.5,275.5,2026-10-20,1,11,93,0.9797958501903223
+323,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1002113,274.0,274.0,2026-10-03,1,28,82,0.9800714070369052
+324,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1001361,272.0,272.0,2026-10-02,1,29,68,0.9803449525196445
+325,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1007620,258.5,258.5,2026-10-11,1,20,94,0.9806049212964391
+326,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1019771,256.0,256.0,2026-10-26,1,5,69,0.980862375868429
+327,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1007698,255.0,255.0,2026-10-10,1,21,83,0.9811188247584971
+328,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1023241,255.0,255.0,2026-10-30,1,1,83,0.9813752736485651
+329,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1022068,254.0,254.0,2026-10-29,1,2,85,0.9816307168567114
+330,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1022335,254.0,254.0,2026-10-29,1,2,65,0.9818861600648576
+331,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1010786,4018.0,250.0,2026-10-14,1,17,6,0.9821375805453165
+332,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017646,249.0,249.0,2026-10-27,1,4,95,0.9823879953438536
+333,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1020316,246.0,246.0,2026-10-29,1,2,96,0.9826353930966252
+334,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1017698,245.0,245.0,2026-10-27,1,4,97,0.9828817851674749
+335,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1009592,244.0,244.0,2026-10-12,1,19,66,0.9831271715564028
+336,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1011889,244.0,244.0,2026-10-21,1,10,98,0.9833725579453307
+337,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1012230,243.0,243.0,2026-10-16,1,15,86,0.9836169386523368
+338,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014700,240.0,240.0,2026-10-19,1,12,87,0.9838583023135773
+339,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1008366,238.0,238.0,2026-10-11,1,20,70,0.9840976546109742
+340,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1014425,1300.0,236.0,2026-10-19,1,12,7,0.9843349955445274
+341,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1012709,233.0,233.0,2026-10-16,1,15,88,0.9845693194323151
+342,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1010414,231.0,231.0,2026-10-15,1,16,99,0.9848016319562591
+343,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1018819,229.0,229.0,2026-10-30,1,1,100,0.9850319331163595
+344,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012357,228.0,228.0,2026-10-20,1,11,101,0.985261228594538
+345,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013910,228.0,228.0,2026-10-24,1,7,101,0.9854905240727165
+346,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1018729,228.0,228.0,2026-10-25,1,6,101,0.985719819550895
+347,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1004282,227.5,227.5,2026-10-08,1,23,104,0.9859486121881127
+348,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1004153,1695.0,215.0,2026-10-05,1,26,8,0.9861648338013073
+349,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1014045,215.0,215.0,2026-10-18,1,13,71,0.9863810554145019
+350,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1006763,1339.0,212.0,2026-10-09,1,22,9,0.9865942599819311
+351,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021945,1630.0,204.0,2026-10-28,1,3,10,0.9867994190939856
+352,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015847,201.5,201.5,2026-10-26,1,5,105,0.9870020640012355
+353,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1006523,1200.0,200.0,2026-10-09,1,22,11,0.9872032003856026
+354,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1014609,200.0,200.0,2026-10-19,1,12,67,0.9874043367699697
+355,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1015992,198.0,198.0,2026-10-22,1,9,106,0.9876034617904932
+356,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1011042,195.0,195.0,2026-10-14,1,17,72,0.9877995697652511
+357,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1011298,1410.0,195.0,2026-10-15,1,16,12,0.9879956777400091
+358,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1020641,194.0,194.0,2026-10-27,1,4,73,0.9881907800328452
+359,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1004669,1081.0,193.0,2026-10-06,1,25,13,0.9883848766437594
+360,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1004087,1150.0,188.0,2026-10-05,1,26,14,0.9885739448450646
+361,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1004310,187.0,187.0,2026-10-12,1,19,107,0.9887620073644479
+362,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1014181,185.0,185.0,2026-10-18,1,13,89,0.9889480585199873
+363,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1001498,183.0,183.0,2026-10-02,1,29,68,0.9891320983116834
+364,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1005425,1789.0,179.0,2026-10-07,1,24,15,0.9893121153756919
+365,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1014159,174.0,174.0,2026-10-18,1,13,74,0.9894871040300913
+366,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1005289,173.0,173.0,2026-10-07,1,24,75,0.9896610870025688
+367,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1020875,172.0,172.0,2026-10-27,1,4,90,0.9898340642931246
+368,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002245,969.0,171.0,2026-10-03,1,28,16,0.9900060359017585
+369,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1001155,1037.0,170.0,2026-10-02,1,29,17,0.9901770018284706
+370,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1011948,168.0,168.0,2026-10-15,1,16,91,0.9903459563913389
+371,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1018855,167.0,167.0,2026-10-29,1,2,108,0.9905139052722854
+372,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013354,165.5,165.5,2026-10-23,1,8,109,0.9906803456303492
+373,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1023899,1931.0,165.0,2026-10-31,1,0,18,0.9908462831474522
+374,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003635,2055.0,162.0,2026-10-05,1,26,19,0.9910092036187895
+375,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018475,815.0,161.0,2026-10-24,1,7,20,0.991171118408205
+376,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1017375,160.0,160.0,2026-10-23,1,8,92,0.9913320275156987
+377,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1002173,159.0,159.0,2026-10-03,1,28,76,0.9914919309412706
+378,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002281,873.0,159.0,2026-10-03,1,28,21,0.9916518343668425
+379,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1023552,1317.0,158.0,2026-10-31,1,0,22,0.9918107321104925
+380,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1021581,156.0,156.0,2026-10-28,1,3,69,0.9919676184902989
+381,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1013497,152.0,152.0,2026-10-17,1,14,93,0.9921204821424179
+382,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1011266,805.0,151.0,2026-10-15,1,16,23,0.992272340112615
+383,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1024126,1797.0,151.0,2026-10-31,1,0,23,0.9924241980828122
+384,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1010134,149.0,149.0,2026-10-19,1,12,110,0.9925740446891658
+385,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1019136,149.0,149.0,2026-10-28,1,3,110,0.9927238912955193
+386,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1004236,148.0,148.0,2026-10-09,1,22,112,0.9928727322199509
+387,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1009030,1424.0,145.0,2026-10-12,1,19,25,0.9930185560986171
+388,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020536,1113.0,144.0,2026-10-27,1,4,26,0.9931633742953614
+389,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1016816,899.0,143.0,2026-10-22,1,9,27,0.9933071868101839
+390,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1007909,142.0,142.0,2026-10-16,1,15,113,0.9934499936430846
+391,L1,BOOKED_PAYMENT_FAILED,break,Finance (AR),Reverse the receipt or collect from customer,ORD-1009210,137.0,137.0,2026-10-12,1,19,77,0.993587772066376
+392,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018764,1601.0,135.0,2026-10-24,1,7,28,0.9937235391258239
+393,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020439,1148.0,134.0,2026-10-26,1,5,29,0.9938583005033499
+394,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1007580,133.0,133.0,2026-10-15,1,16,114,0.9939920561989539
+395,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1015053,1705.0,130.0,2026-10-20,1,11,30,0.9941227948487926
+396,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1019370,1007.0,125.0,2026-10-25,1,6,31,0.9942485050890221
+397,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1003295,124.0,124.0,2026-10-04,1,27,70,0.9943732096473297
+398,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1006207,783.0,124.0,2026-10-08,1,23,32,0.9944979142056373
+399,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1008210,723.0,124.0,2026-10-11,1,20,32,0.9946226187639449
+400,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1014473,1145.0,120.0,2026-10-19,1,12,34,0.9947433005945652
+401,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1009383,616.0,118.0,2026-10-12,1,19,35,0.9948619710613418
+402,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1010232,661.0,118.0,2026-10-13,1,18,35,0.9949806415281184
+403,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020466,1224.0,117.0,2026-10-26,1,5,37,0.9950983063129731
+404,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018214,723.0,115.0,2026-10-24,1,7,38,0.9952139597339843
+405,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1015381,850.0,114.0,2026-10-20,1,11,39,0.9953286074730735
+406,L1,NO_GATEWAY_RECORD,break,Finance (AR),Find proof of payment or reverse the receipt,ORD-1012620,108.0,108.0,2026-10-16,1,15,94,0.9954372211206318
+407,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1005776,106.0,106.0,2026-10-11,1,20,115,0.9955438234043463
+408,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021132,905.0,106.0,2026-10-27,1,4,40,0.995650425688061
+409,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1022373,812.0,106.0,2026-10-29,1,2,40,0.9957570279717755
+410,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002768,928.0,105.0,2026-10-04,1,27,42,0.9958626245735682
+411,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1013374,1530.0,105.0,2026-10-17,1,14,42,0.995968221175361
+412,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1019682,732.0,100.0,2026-10-25,1,6,44,0.9960687893675445
+413,L1,GATEWAY_NOT_BOOKED,break,Finance (GL),Book the missing sale,ORD-1010496,99.0,99.0,2026-10-14,1,17,71,0.9961683518778063
+414,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1013524,99.0,99.0,2026-10-23,1,8,116,0.9962679143880679
+415,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1008392,806.0,98.0,2026-10-11,1,20,45,0.9963664712164079
+416,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1022949,781.0,96.0,2026-10-30,1,1,46,0.9964630166809041
+417,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1024001,482.0,96.0,2026-10-31,1,0,46,0.9965595621454003
+418,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1001978,524.0,94.0,2026-10-03,1,28,48,0.9966540962460528
+419,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1012315,531.0,92.0,2026-10-16,1,15,49,0.9967466189828618
+420,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003110,1093.0,89.0,2026-10-04,1,27,50,0.9968361246739051
+421,L1,REFUND_NO_CREDIT_NOTE,break,Finance (AR),Raise the credit note against the order,ORD-1012313,89.0,89.0,2026-10-18,1,13,117,0.9969256303649485
+422,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003379,693.0,86.0,2026-10-04,1,27,51,0.9970121190102263
+423,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018063,467.0,83.0,2026-10-23,1,8,52,0.9970955906097387
+424,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020610,668.0,80.0,2026-10-27,1,4,53,0.9971760451634856
+425,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002427,405.0,79.0,2026-10-03,1,28,54,0.9972554940353106
+426,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1013519,632.0,79.0,2026-10-17,1,14,54,0.9973349429071356
+427,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1005653,440.0,78.0,2026-10-07,1,24,56,0.9974133860970388
+428,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020333,819.0,78.0,2026-10-26,1,5,56,0.9974918292869419
+429,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018119,429.0,76.0,2026-10-23,1,8,58,0.9975682611130015
+430,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1024023,1323.0,76.0,2026-10-31,1,0,58,0.997644692939061
+431,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1005698,645.0,75.0,2026-10-07,1,24,60,0.9977201190831987
+432,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021664,389.0,74.0,2026-10-28,1,3,61,0.9977945395454145
+433,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020582,587.0,72.0,2026-10-27,1,4,62,0.9978669486437867
+434,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1017608,510.0,68.0,2026-10-23,1,8,63,0.9979353350144715
+435,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018141,976.0,68.0,2026-10-23,1,8,63,0.9980037213851563
+436,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1022511,372.0,67.0,2026-10-29,1,2,65,0.9980711020739192
+437,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021331,514.0,66.0,2026-10-28,1,3,66,0.9981374770807604
+438,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1017050,490.0,65.0,2026-10-22,1,9,67,0.9982028464056797
+439,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002583,375.0,63.0,2026-10-03,1,28,68,0.9982662043667554
+440,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1005052,506.0,62.0,2026-10-07,1,24,69,0.9983285566459091
+441,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1009193,719.0,61.0,2026-10-12,1,19,70,0.9983899032431411
+442,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1013455,826.0,60.0,2026-10-17,1,14,71,0.9984502441584513
+443,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1006225,333.0,59.0,2026-10-08,1,23,72,0.9985095793918396
+444,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018640,1030.0,59.0,2026-10-24,1,7,72,0.9985689146252279
+445,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1012861,897.0,58.0,2026-10-17,1,14,74,0.9986272441766944
+446,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1009673,799.0,56.0,2026-10-13,1,18,75,0.9986835623643172
+447,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018857,794.0,56.0,2026-10-24,1,7,75,0.99873988055194
+448,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1008695,676.0,55.0,2026-10-11,1,20,77,0.998795193057641
+449,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020988,372.0,54.0,2026-10-27,1,4,78,0.99884949988142
+450,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1012612,391.0,53.0,2026-10-16,1,15,79,0.9989028010232773
+451,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1000679,823.0,52.0,2026-10-01,1,30,80,0.9989550964832128
+452,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1014569,863.0,51.0,2026-10-19,1,12,81,0.9990063862612264
+453,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002310,765.0,47.0,2026-10-03,1,28,82,0.9990536533115527
+454,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1016990,377.0,46.0,2026-10-22,1,9,83,0.9990999146799571
+455,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1023484,451.0,46.0,2026-10-30,1,1,83,0.9991461760483615
+456,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002186,557.0,43.0,2026-10-03,1,28,85,0.9991894203710004
+457,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1011360,482.0,43.0,2026-10-15,1,16,85,0.9992326646936395
+458,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1014655,405.0,43.0,2026-10-19,1,12,85,0.9992759090162784
+459,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1015377,454.0,43.0,2026-10-20,1,11,85,0.9993191533389173
+460,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021671,592.0,43.0,2026-10-28,1,3,85,0.9993623976615562
+461,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1011413,295.0,42.0,2026-10-15,1,16,90,0.9994046363022733
+462,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018905,552.0,41.0,2026-10-24,1,7,91,0.9994458692610686
+463,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1005434,450.0,35.0,2026-10-07,1,24,92,0.9994810681283328
+464,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1016254,273.0,35.0,2026-10-21,1,10,92,0.999516266995597
+465,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003622,466.0,31.0,2026-10-05,1,26,94,0.999547443135174
+466,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1000895,389.0,30.0,2026-10-01,1,30,95,0.999577613592829
+467,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1006245,211.0,30.0,2026-10-08,1,23,95,0.9996077840504841
+468,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002743,229.0,29.0,2026-10-04,1,27,97,0.9996369488262173
+469,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1019892,306.0,29.0,2026-10-26,1,5,97,0.9996661136019506
+470,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020979,502.0,27.0,2026-10-27,1,4,99,0.9996932670138401
+471,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1002500,428.0,26.0,2026-10-03,1,28,100,0.9997194147438079
+472,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1020916,369.0,26.0,2026-10-27,1,4,100,0.9997455624737756
+473,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1005994,289.0,25.0,2026-10-08,1,23,102,0.9997707045218215
+474,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1007143,189.0,24.0,2026-10-09,1,22,103,0.9997948408879456
+475,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1018295,184.0,24.0,2026-10-24,1,7,103,0.9998189772540695
+476,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1003442,204.0,23.0,2026-10-05,1,26,105,0.9998421079382718
+477,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1011908,422.0,22.0,2026-10-15,1,16,106,0.9998642329405522
+478,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1021187,314.0,21.0,2026-10-27,1,4,107,0.9998853522609107
+479,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1010528,238.0,18.0,2026-10-14,1,17,108,0.9999034545355038
+480,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1014440,332.0,18.0,2026-10-19,1,12,108,0.9999215568100969
+481,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1017390,99.0,18.0,2026-10-23,1,8,108,0.9999396590846898
+482,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1013197,130.0,17.0,2026-10-17,1,14,111,0.9999567556773611
+483,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1008150,266.0,16.0,2026-10-11,1,20,112,0.9999728465881105
+484,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1022907,99.0,14.0,2026-10-30,1,1,113,0.9999869261350162
+485,L1,AMOUNT_MISMATCH,break,E-commerce ops,Pass checkout discount to ERP; raise credit note for the difference,ORD-1012844,157.0,13.0,2026-10-17,1,14,114,1.0
+486,L2,FEE_ABOVE_CONTRACT,claim,Treasury / vendor manager,"Raise a refund claim with PayFlux, attach fee_audit extract",Wallet,3445.1500000000024,3445.1500000000024,2026-10-15,1308,16,1,1.0
+487,L2,FEE_ABOVE_CONTRACT,claim,Treasury / vendor manager,"Raise a refund claim with PayFlux, attach fee_audit extract",Card,508.0099999999997,508.0099999999997,2026-10-02,87,29,2,1.0
+488,L3,SETTLEMENT_IN_TRANSIT,timing,Treasury,Confirm credit in November statement,setl_20261031,664381.6,664381.6,2026-11-02,1,-2,1,1.0
+489,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000316,7178.0,7178.0,2026-10-01,1,30,1,1.0
+490,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024229,3678.0,3678.0,2026-11-01,1,-1,2,1.0
+491,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000351,2793.0,2793.0,2026-10-01,1,30,3,1.0
+492,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1022334,2630.0,2630.0,2026-10-31,1,0,1,1.0
+493,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000334,2499.0,2499.0,2026-10-01,1,30,4,1.0
+494,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024248,2454.0,2454.0,2026-11-01,1,-1,5,1.0
+495,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000361,2213.0,2213.0,2026-10-01,1,30,6,1.0
+496,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024234,2178.0,2178.0,2026-11-01,1,-1,7,1.0
+497,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000321,2131.0,2131.0,2026-10-01,1,30,8,1.0
+498,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024272,2088.0,2088.0,2026-11-01,1,-1,9,1.0
+499,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000363,2085.0,2085.0,2026-10-01,1,30,10,1.0
+500,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000326,2037.0,2037.0,2026-10-01,1,30,11,1.0
+501,L1,CUTOFF_TIMING,timing,Finance (AR),Raise the credit note against the order,ORD-1023240,2027.0,2027.0,2026-11-01,1,-1,12,1.0
+502,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024278,2004.0,2004.0,2026-11-01,1,-1,13,1.0
+503,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024258,1741.0,1741.0,2026-11-01,1,-1,14,1.0
+504,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000319,1702.0,1702.0,2026-10-01,1,30,15,1.0
+505,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024254,1641.0,1641.0,2026-11-01,1,-1,16,1.0
+506,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000350,1621.0,1621.0,2026-10-01,1,30,17,1.0
+507,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000323,1586.0,1586.0,2026-10-01,1,30,18,1.0
+508,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024232,1543.0,1543.0,2026-11-01,1,-1,19,1.0
+509,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024239,1537.0,1537.0,2026-11-01,1,-1,20,1.0
+510,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000364,1446.0,1446.0,2026-10-01,1,30,21,1.0
+511,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024243,1369.0,1369.0,2026-11-01,1,-1,22,1.0
+512,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024268,1353.0,1353.0,2026-11-01,1,-1,23,1.0
+513,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000359,1329.0,1329.0,2026-10-01,1,30,24,1.0
+514,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000318,1313.0,1313.0,2026-10-01,1,30,25,1.0
+515,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024276,1293.0,1293.0,2026-11-01,1,-1,26,1.0
+516,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024265,1266.0,1266.0,2026-11-01,1,-1,27,1.0
+517,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1019550,1263.0,1263.0,2026-10-31,1,0,2,1.0
+518,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1022961,1260.0,1260.0,2026-10-31,1,0,3,1.0
+519,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024262,1248.0,1248.0,2026-11-01,1,-1,28,1.0
+520,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1021514,1222.0,1222.0,2026-10-31,1,0,4,1.0
+521,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024253,1195.0,1195.0,2026-11-01,1,-1,29,1.0
+522,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000331,1183.0,1183.0,2026-10-01,1,30,30,1.0
+523,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000310,1155.0,1155.0,2026-10-01,1,30,31,1.0
+524,L1,CUTOFF_TIMING,timing,Finance (AR),Raise the credit note against the order,ORD-1020856,1134.0,1134.0,2026-11-01,1,-1,32,1.0
+525,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024247,1118.0,1118.0,2026-11-01,1,-1,33,1.0
+526,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024250,1109.0,1109.0,2026-11-01,1,-1,34,1.0
+527,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024260,1109.0,1109.0,2026-11-01,1,-1,34,1.0
+528,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1021748,1087.0,1087.0,2026-10-31,1,0,5,1.0
+529,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000349,1085.0,1085.0,2026-10-01,1,30,36,1.0
+530,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000344,1083.0,1083.0,2026-10-01,1,30,37,1.0
+531,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024264,1069.0,1069.0,2026-11-01,1,-1,38,1.0
+532,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000347,1041.0,1041.0,2026-10-01,1,30,39,1.0
+533,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000342,1031.0,1031.0,2026-10-01,1,30,40,1.0
+534,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000322,1014.0,1014.0,2026-10-01,1,30,41,1.0
+535,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024242,948.0,948.0,2026-11-01,1,-1,42,1.0
+536,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000335,947.0,947.0,2026-10-01,1,30,43,1.0
+537,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024261,940.0,940.0,2026-11-01,1,-1,44,1.0
+538,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000360,926.0,926.0,2026-10-01,1,30,45,1.0
+539,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000312,902.0,902.0,2026-10-01,1,30,46,1.0
+540,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000332,902.0,902.0,2026-10-01,1,30,46,1.0
+541,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000309,897.0,897.0,2026-10-01,1,30,48,1.0
+542,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000328,897.0,897.0,2026-10-01,1,30,48,1.0
+543,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000348,891.0,891.0,2026-10-01,1,30,50,1.0
+544,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000325,845.0,845.0,2026-10-01,1,30,51,1.0
+545,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1020125,844.5,844.5,2026-10-31,1,0,6,1.0
+546,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024269,840.0,840.0,2026-11-01,1,-1,52,1.0
+547,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000324,810.0,810.0,2026-10-01,1,30,53,1.0
+548,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024246,805.0,805.0,2026-11-01,1,-1,54,1.0
+549,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000306,792.0,792.0,2026-10-01,1,30,55,1.0
+550,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024263,781.0,781.0,2026-11-01,1,-1,56,1.0
+551,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000330,776.0,776.0,2026-10-01,1,30,57,1.0
+552,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000308,767.0,767.0,2026-10-01,1,30,58,1.0
+553,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000329,752.0,752.0,2026-10-01,1,30,59,1.0
+554,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000352,752.0,752.0,2026-10-01,1,30,59,1.0
+555,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1021086,722.0,722.0,2026-10-31,1,0,7,1.0
+556,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000357,718.0,718.0,2026-10-01,1,30,61,1.0
+557,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000337,714.0,714.0,2026-10-01,1,30,62,1.0
+558,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000338,712.0,712.0,2026-10-01,1,30,63,1.0
+559,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1020778,711.0,711.0,2026-10-31,1,0,8,1.0
+560,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024231,706.0,706.0,2026-11-01,1,-1,64,1.0
+561,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024233,702.0,702.0,2026-11-01,1,-1,65,1.0
+562,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000317,692.0,692.0,2026-10-01,1,30,66,1.0
+563,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024249,680.0,680.0,2026-11-01,1,-1,67,1.0
+564,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000333,669.0,669.0,2026-10-01,1,30,68,1.0
+565,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024256,666.0,666.0,2026-11-01,1,-1,69,1.0
+566,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024245,652.0,652.0,2026-11-01,1,-1,70,1.0
+567,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000341,650.0,650.0,2026-10-01,1,30,71,1.0
+568,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000354,647.0,647.0,2026-10-01,1,30,72,1.0
+569,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000307,638.0,638.0,2026-10-01,1,30,73,1.0
+570,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024238,633.0,633.0,2026-11-01,1,-1,74,1.0
+571,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024267,628.0,628.0,2026-11-01,1,-1,75,1.0
+572,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024241,612.0,612.0,2026-11-01,1,-1,76,1.0
+573,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000345,605.0,605.0,2026-10-01,1,30,77,1.0
+574,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024252,589.0,589.0,2026-11-01,1,-1,78,1.0
+575,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000305,579.0,579.0,2026-10-01,1,30,79,1.0
+576,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000353,577.0,577.0,2026-10-01,1,30,80,1.0
+577,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000320,554.0,554.0,2026-10-01,1,30,81,1.0
+578,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000355,543.0,543.0,2026-10-01,1,30,82,1.0
+579,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000340,506.0,506.0,2026-10-01,1,30,83,1.0
+580,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024273,502.0,502.0,2026-11-01,1,-1,84,1.0
+581,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000311,494.0,494.0,2026-10-01,1,30,85,1.0
+582,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000315,493.0,493.0,2026-10-01,1,30,86,1.0
+583,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000327,485.0,485.0,2026-10-01,1,30,87,1.0
+584,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024257,485.0,485.0,2026-11-01,1,-1,87,1.0
+585,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024237,482.0,482.0,2026-11-01,1,-1,89,1.0
+586,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024275,471.0,471.0,2026-11-01,1,-1,90,1.0
+587,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000356,470.0,470.0,2026-10-01,1,30,91,1.0
+588,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000339,468.0,468.0,2026-10-01,1,30,92,1.0
+589,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024277,465.0,465.0,2026-11-01,1,-1,93,1.0
+590,L1,CUTOFF_TIMING,timing,Finance (AR),Raise the credit note against the order,ORD-1022641,462.5,462.5,2026-11-01,1,-1,94,1.0
+591,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024244,454.0,454.0,2026-11-01,1,-1,95,1.0
+592,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024266,440.0,440.0,2026-11-01,1,-1,96,1.0
+593,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000336,439.0,439.0,2026-10-01,1,30,97,1.0
+594,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1022020,425.0,425.0,2026-10-31,1,0,9,1.0
+595,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024236,406.0,406.0,2026-11-01,1,-1,98,1.0
+596,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1020565,404.5,404.5,2026-10-31,1,0,10,1.0
+597,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1019749,396.0,396.0,2026-10-31,1,0,11,1.0
+598,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1019440,379.0,379.0,2026-10-31,1,0,12,1.0
+599,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000304,377.0,377.0,2026-10-01,1,30,99,1.0
+600,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000362,372.0,372.0,2026-10-01,1,30,100,1.0
+601,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1020365,365.0,365.0,2026-10-31,1,0,13,1.0
+602,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1020119,356.0,356.0,2026-10-31,1,0,14,1.0
+603,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000346,312.0,312.0,2026-10-01,1,30,101,1.0
+604,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000343,303.0,303.0,2026-10-01,1,30,102,1.0
+605,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024230,300.0,300.0,2026-11-01,1,-1,103,1.0
+606,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000313,289.0,289.0,2026-10-01,1,30,104,1.0
+607,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024235,250.0,250.0,2026-11-01,1,-1,105,1.0
+608,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000303,226.0,226.0,2026-10-01,1,30,106,1.0
+609,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000358,225.0,225.0,2026-10-01,1,30,107,1.0
+610,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024271,224.0,224.0,2026-11-01,1,-1,108,1.0
+611,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024259,219.0,219.0,2026-11-01,1,-1,109,1.0
+612,L1,CUTOFF_TIMING,timing,Finance (GL),Re-pull gateway report by IST date; no entry,ORD-1000314,209.0,209.0,2026-10-01,1,30,110,1.0
+613,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1021170,199.0,199.0,2026-10-31,1,0,15,1.0
+614,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024255,195.0,195.0,2026-11-01,1,-1,111,1.0
+615,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024251,158.0,158.0,2026-11-01,1,-1,112,1.0
+616,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024270,155.0,155.0,2026-11-01,1,-1,113,1.0
+617,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024240,140.0,140.0,2026-11-01,1,-1,114,1.0
+618,L1,CUTOFF_TIMING,timing,Finance (GL),November revenue; no October entry,ORD-1024274,135.0,135.0,2026-11-01,1,-1,115,1.0
+619,L1,REFUND_CN_PENDING,timing,Finance (AR),Confirm the credit note is posted in early November; break if not,ORD-1020531,84.5,84.5,2026-10-31,1,0,16,1.0

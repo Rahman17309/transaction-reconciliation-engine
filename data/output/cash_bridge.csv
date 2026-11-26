@@ -6,8 +6,8 @@ step,item,kind,amount_inr,running_inr
 5,Rounding within ±₹1,matched,-1.0,21880356.5
 6,Cut-off: unexported 1 Oct captures not in ERP,timing,256.0,21880612.5
 7,Gateway fees (MDR) and 18% GST on fees,cost,-262236.51,21618375.99
-8,Refunds netted by gateway with no ERP credit note,break,-105075.0,21513300.99
-9,Credit-note vs refund differences and refund timing,timing,0.0,21513300.99
+8,Refunds netted by gateway with no ERP credit note,break,-92726.5,21525649.49
+9,Credit-note vs refund differences and refund timing,timing,-12348.5,21513300.99
 10,"Chargebacks netted from payouts, not booked",break,-25150.0,21488150.99
 11,30 Sep batch credited on 1 Oct (September sales),timing,267772.6,21755923.59
 12,19 Oct batch held by gateway (overdue),break,-641741.68,21114181.91

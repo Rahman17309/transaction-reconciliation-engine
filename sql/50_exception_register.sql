@@ -15,9 +15,13 @@ WITH items AS (
     UNION ALL  -- refunds
     SELECT 'L1', CASE rule WHEN 'F3_no_credit_note' THEN 'REFUND_NO_CREDIT_NOTE'
                            WHEN 'F2_amount_differs' THEN 'REFUND_CN_AMOUNT_DIFFERS'
+                           WHEN 'F5_cn_pending'     THEN 'REFUND_CN_PENDING'
                            ELSE 'CUTOFF_TIMING' END,
-           CASE WHEN rule = 'F4_next_period' THEN 'timing' ELSE 'break' END,
-           'Finance (AR)', 'Raise the credit note against the order', order_id, refund_inr,
+           CASE WHEN rule IN ('F4_next_period', 'F5_cn_pending') THEN 'timing' ELSE 'break' END,
+           'Finance (AR)',
+           CASE WHEN rule = 'F5_cn_pending' THEN 'Confirm the credit note is posted in early November; break if not'
+                ELSE 'Raise the credit note against the order' END,
+           order_id, refund_inr,
            CASE WHEN rule = 'F2_amount_differs' THEN refund_inr - cn_inr ELSE refund_inr END,
            ts_ist::DATE, 1
     FROM refund_match WHERE rule <> 'F1_matched'

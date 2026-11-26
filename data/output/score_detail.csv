@@ -1,0 +1,37 @@
+issue,key,scope_note,flagged,labelled,outcome,engine_rule
+amount_mismatch,ORD-1000097,"order dated before 1 Oct IST, not in the October ledger",False,True,FN,
+amount_mismatch,ORD-1000230,"order dated before 1 Oct IST, not in the October ledger",False,True,FN,
+amount_mismatch,ORD-1000309,capture outside the UTC-dated export (before 05:30 IST 1 Oct or after 05:30 IST 1 Nov),False,True,FN,R5_cutoff_erp
+amount_mismatch,ORD-1000329,capture outside the UTC-dated export (before 05:30 IST 1 Oct or after 05:30 IST 1 Nov),False,True,FN,R5_cutoff_erp
+fee_overcharge_card,ORD-1000179,capture outside the UTC-dated export (before 05:30 IST 1 Oct or after 05:30 IST 1 Nov),False,True,FN,
+fee_overcharge_wallet_rate_change,ORD-1024230,capture is 1 Nov in IST (next period),False,True,FN,R6_cutoff_gateway
+fee_overcharge_wallet_rate_change,ORD-1024240,capture is 1 Nov in IST (next period),False,True,FN,R6_cutoff_gateway
+fee_overcharge_wallet_rate_change,ORD-1024241,capture is 1 Nov in IST (next period),False,True,FN,R6_cutoff_gateway
+fee_overcharge_wallet_rate_change,ORD-1024251,capture is 1 Nov in IST (next period),False,True,FN,R6_cutoff_gateway
+fee_overcharge_wallet_rate_change,ORD-1024264,capture is 1 Nov in IST (next period),False,True,FN,R6_cutoff_gateway
+fee_overcharge_wallet_rate_change,ORD-1024284,capture outside the UTC-dated export (before 05:30 IST 1 Oct or after 05:30 IST 1 Nov),False,True,FN,
+fee_overcharge_wallet_rate_change,ORD-1024288,capture outside the UTC-dated export (before 05:30 IST 1 Oct or after 05:30 IST 1 Nov),False,True,FN,
+fee_overcharge_wallet_rate_change,ORD-1024295,capture outside the UTC-dated export (before 05:30 IST 1 Oct or after 05:30 IST 1 Nov),False,True,FN,
+fee_overcharge_wallet_rate_change,ORD-1024296,capture outside the UTC-dated export (before 05:30 IST 1 Oct or after 05:30 IST 1 Nov),False,True,FN,
+fee_overcharge_wallet_rate_change,ORD-1024304,capture outside the UTC-dated export (before 05:30 IST 1 Oct or after 05:30 IST 1 Nov),False,True,FN,
+fee_overcharge_wallet_rate_change,ORD-1024311,capture outside the UTC-dated export (before 05:30 IST 1 Oct or after 05:30 IST 1 Nov),False,True,FN,
+gateway_only_not_booked,ORD-1000112,capture outside the UTC-dated export (before 05:30 IST 1 Oct or after 05:30 IST 1 Nov),False,True,FN,
+gateway_only_not_booked,ORD-1000223,capture outside the UTC-dated export (before 05:30 IST 1 Oct or after 05:30 IST 1 Nov),False,True,FN,
+ledger_only_no_gateway_record,ORD-1000209,"order dated before 1 Oct IST, not in the October ledger",False,True,FN,
+ledger_only_payment_failed,ORD-1000213,"order dated before 1 Oct IST, not in the October ledger",False,True,FN,
+refund_not_in_ledger,ORD-1019934,refund processed after the export window (November),False,True,FN,R1_exact
+refund_not_in_ledger,ORD-1020531,,False,True,FN,F5_cn_pending + R1_exact
+refund_not_in_ledger,ORD-1020856,refund is 1 Nov in IST (next period),False,True,FN,F4_next_period + R1_exact
+refund_not_in_ledger,ORD-1022334,,False,True,FN,F5_cn_pending + R1_exact
+refund_not_in_ledger,ORD-1022569,refund processed after the export window (November),False,True,FN,R1_exact
+refund_not_in_ledger,ORD-1022641,refund is 1 Nov in IST (next period),False,True,FN,F4_next_period + R1_exact
+refund_not_in_ledger,ORD-1022691,refund processed after the export window (November),False,True,FN,R1_exact
+refund_not_in_ledger,ORD-1022825,refund processed after the export window (November),False,True,FN,R1_exact
+refund_not_in_ledger,ORD-1022852,refund processed after the export window (November),False,True,FN,R1_exact
+refund_not_in_ledger,ORD-1023059,refund processed after the export window (November),False,True,FN,R1_exact
+refund_not_in_ledger,ORD-1023134,refund processed after the export window (November),False,True,FN,R1_exact
+refund_not_in_ledger,ORD-1023215,refund processed after the export window (November),False,True,FN,R1_exact
+refund_not_in_ledger,ORD-1023237,refund processed after the export window (November),False,True,FN,R1_exact
+refund_not_in_ledger,ORD-1023240,refund is 1 Nov in IST (next period),False,True,FN,F4_next_period + R1_exact
+refund_not_in_ledger,ORD-1023907,refund processed after the export window (November),False,True,FN,R1_exact
+rounding_within_tolerance,ORD-1000251,"order dated before 1 Oct IST, not in the October ledger",False,True,FN,
