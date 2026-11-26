@@ -98,3 +98,44 @@ A: It walks from book revenue to cash received, one reconciling item at a time: 
 
 **Q: You have 501 breaks. How would you prioritise them?**
 A: By value and owner. I rank items within each type and compute the cumulative share of break value. Here one overdue payout is 63.7% of the value, and 72 items cover 80%. Each owner gets their top items first with a `QUALIFY ROW_NUMBER() OVER (PARTITION BY owner …)` query, and ageing shows what's at risk of falling past the chargeback or claim window.
+
+---
+
+## Day 4: Validation against ground truth
+
+### What I did
+- Wrote `src/score.py`, which compares what the engine flagged with the injected labels for all 12 problem types and reports precision, recall and F1 with Wilson 95% intervals. It keeps two views: **raw** (every label) and **in scope** (drops labels on activity outside October IST or outside the files finance received, each with a written reason).
+- Result for October: **precision 100% on every type; recall in scope 99.90%** (2,073 of 2,075). Raw recall is 98.29%, and every raw-only miss is explained.
+- Scoring found two engine bugs, both fixed in SQL:
+  - **Refund false positives.** All 14 were 31 Oct refunds whose credit note was correctly posted in November. I added **F5 CN pending**, with the window learned from the matched pairs' posting lag (p99 = 29.0 h). Refund precision went from 89.47% to 100%.
+  - **Cross-period match.** A sale booked at 23:59 on 31 Oct and captured on 1 Nov matched as "exact", but its cash is in the November payout. I added **R0 cross-period** as timing.
+- Swept the two judgement calls. Any CN-pending window from 24 to 36 h gives the same result. Any amount tolerance from ₹1 up to just under ₹13 splits rounding from real discounts perfectly.
+- Wrote `src/robustness.py`, which regenerates 20 new months (seeds 101–120) and runs the whole pipeline with the rules frozen. All integrity checks pass, the bridge leaves ₹0.00 unexplained every month, and precision is 100% everywhere. Recall is 99.63–99.90%, and all 106 misses are refunds parked as CN pending.
+- Made every engine export sort deterministically, so reruns produce identical files and clean diffs.
+
+### Key concepts
+- **Precision vs recall in reconciliation.** Precision is the share of flagged items that are real; low precision wastes reviewer time and teaches people to ignore the list. Recall is the share of real problems flagged; low recall means money leaks silently. In finance ops you want both near 100%, and when you must trade, a "pending, re-check" queue is better than either a false alarm or a silent drop.
+- **Wilson score interval.** A confidence interval for a proportion that behaves well near 0% or 100% and with small n. 11/11 chargebacks correct gives a 95% interval of about 74–100%, so a small type still needs more months of evidence.
+- **Scope-adjusted scoring.** Some labels describe activity the review shouldn't flag (next-period captures). Counting them as misses punishes the right answer, but hiding them hides process problems. I report both views and list every excluded label with its reason.
+- **Learned thresholds.** The CN-pending window is the 99th percentile of the observed refund → credit-note lag, so it adapts if finance gets faster or slower. Hard-coded "2 days" would silently go stale.
+- **Sensitivity analysis.** Sweep each judgement parameter and look for a *flat region* around the chosen value. A result that changes a lot when a threshold moves slightly isn't trustworthy.
+- **Out-of-sample testing on generated data.** One seed is one month. Rerunning on many seeds with frozen rules is the reconciliation equivalent of a hold-out set. It caught the R0 bug, which never occurs in the published month.
+
+### Interview Q&A
+**Q: How do you know your reconciliation engine is right?**
+A: Three layers. First, structural integrity checks: every record gets exactly one outcome, payouts rebuild from their transactions, and the cash bridge leaves ₹0 unexplained. Second, I score it against ground truth. I generated the data with labelled problems, so I can measure precision and recall per exception type: 100% precision on all types and 99.90% recall in scope. Third, I check it out of sample: 20 freshly generated months with the rules frozen. A clean bridge alone isn't proof, because two wrong classifications can cancel out.
+
+**Q: Your engine flagged refunds as breaks that weren't. What did you do?**
+A: I looked at every false positive. All 14 were refunds on 31 Oct whose credit notes finance posted correctly in November, so it was a timing issue, not a break. Instead of guessing a grace period, I measured the actual refund → credit-note lag on the 294 matched pairs (median 14 h, p99 29 h) and used the p99 as a "pending" window. Refunds inside it go to a timing queue to re-check in early November. Precision went from 89.5% to 100%, at the cost of 2 real breaks that wait a few days in that queue instead of being lost.
+
+**Q: Why report both "raw" and "in-scope" scores?**
+A: Raw recall (98.29%) includes labels on activity the October close shouldn't flag, like overcharges on 1 Nov captures, which the engine correctly sends to next period. Counting those as misses would be misleading, but dropping them silently would be worse. So I show both and list every excluded label with its reason. The reasons were useful in themselves: most exclusions exist only because the gateway report is pulled by UTC date, which gives finance a concrete process fix.
+
+**Q: How did you choose the ₹1 amount tolerance, and how would you defend it?**
+A: With a sensitivity sweep. The largest rounding difference in the data is ₹1.00 and the smallest real checkout discount is ₹13.00, so any tolerance in that band gives exactly the same split. ₹1 sits at the conservative end. At ₹20, 7 real discounts would be auto-cleared, so I'd defend ₹1 as the tightest value that removes the rounding noise.
+
+**Q: What did testing on 20 other months find that October didn't?**
+A: A real bug. A sale booked at 23:59 on 31 Oct and captured seconds later on 1 Nov matched as "exact" in leg 1, but its cash was in the November payout, so the cash bridge had an unexplained line in 7 of the 20 months. October happened to have no such order. I added a cross-period rule that classes these as timing, and every month then reconciled to ₹0.00. It's the reason I don't trust a rule set tested on one sample.
+
+**Q: Precision is 100%. Isn't that suspicious?**
+A: It would be on real data, and I'd say so. Here the problems are injected by rules I documented, and the matching rules target those mechanisms, so very high scores are expected. The useful parts are the bugs scoring exposed, the trade-off curves, and stability on unseen months. On real data I'd expect lower numbers and would sample-audit flagged items by hand to estimate precision, because real data has no labels.
