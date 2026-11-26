@@ -17,9 +17,10 @@ steps AS (
         SUM(diff_inr) FROM leg1_match WHERE rule = 'R3_amount_mismatch'
     UNION ALL SELECT 5, 'Rounding within ±₹1', 'matched',
         SUM(diff_inr) FROM leg1_match WHERE rule = 'R2_tolerance'
-    UNION ALL SELECT 6, 'Cut-off: unexported 1 Oct captures not in ERP', 'timing',
+    UNION ALL SELECT 6, 'Cut-off: unexported 1 Oct captures not in ERP; 31 Oct bookings captured 1 Nov', 'timing',
         (SELECT gross_inr - gross_txn FROM leg2_payout_rebuild WHERE settlement_id = 'setl_20261001')
         - (SELECT SUM(erp_amount) FROM leg1_match WHERE rule = 'R5_cutoff_erp')
+        - (SELECT COALESCE(SUM(erp_amount), 0) FROM leg1_match WHERE rule = 'R0_cross_period')
     UNION ALL SELECT 7, 'Gateway fees (MDR) and 18% GST on fees', 'cost',
         -SUM(fee_inr + gst_inr) FROM oct_batches
     UNION ALL SELECT 8, 'Refunds netted by gateway with no ERP credit note', 'break',

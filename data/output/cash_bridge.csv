@@ -4,7 +4,7 @@ step,item,kind,amount_inr,running_inr
 3,Captured but never booked,break,61929.0,21891910.5
 4,Checkout discounts not passed to ERP (amount mismatch),break,-11553.0,21880357.5
 5,Rounding within ±₹1,matched,-1.0,21880356.5
-6,Cut-off: unexported 1 Oct captures not in ERP,timing,256.0,21880612.5
+6,Cut-off: unexported 1 Oct captures not in ERP; 31 Oct bookings captured 1 Nov,timing,256.0,21880612.5
 7,Gateway fees (MDR) and 18% GST on fees,cost,-262236.51,21618375.99
 8,Refunds netted by gateway with no ERP credit note,break,-92726.5,21525649.49
 9,Credit-note vs refund differences and refund timing,timing,-12348.5,21513300.99

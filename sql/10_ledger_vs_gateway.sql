@@ -2,6 +2,10 @@
 -- A rule cascade. Each key gets exactly one outcome, decided by the FIRST rule it satisfies,
 -- so the order of the CASE branches below is the order of the rules.
 --
+--   R0 cross-period     booked in October, but the capture is 1 Nov in IST -> timing (cash is in the
+--                       November batch). Added on Day 4: a 20-seed robustness run found orders booked
+--                       at 23:59 on 31 Oct and captured seconds later matching as "exact", which left
+--                       an unexplained line in the cash bridge.
 --   R1 exact            same order id, same amount
 --   R2 tolerance        same order id, |Δ| ≤ ₹1            -> auto-cleared
 --   R3 amount mismatch  same order id, |Δ| > ₹1            -> break
@@ -27,6 +31,7 @@ WITH joined AS (
 )
 SELECT j.*,
     CASE
+        WHEN voucher_no IS NOT NULL AND status = 'captured' AND NOT in_period_ist                 THEN 'R0_cross_period'
         WHEN voucher_no IS NOT NULL AND status = 'captured' AND diff_inr = 0                     THEN 'R1_exact'
         WHEN voucher_no IS NOT NULL AND status = 'captured' AND ABS(diff_inr) <= p.amount_tolerance THEN 'R2_tolerance'
         WHEN voucher_no IS NOT NULL AND status = 'captured'                                       THEN 'R3_amount_mismatch'
@@ -43,6 +48,7 @@ FROM joined j CROSS JOIN params p;
 -- Outcome class per rule: matched / timing / break / no_action
 CREATE OR REPLACE TABLE rule_catalogue (rule VARCHAR, outcome VARCHAR, exception_type VARCHAR, owner VARCHAR, action VARCHAR);
 INSERT INTO rule_catalogue VALUES
+ ('R0_cross_period',      'timing',    'CUTOFF_TIMING',         'Finance (GL)',    'Booked 31 Oct, captured 1 Nov: cash comes in the November batch; no entry'),
  ('R1_exact',             'matched',   NULL,                    NULL,              NULL),
  ('R2_tolerance',         'matched',   NULL,                    NULL,              'Auto-clear; post rounding to a rounding-off account'),
  ('R3_amount_mismatch',   'break',     'AMOUNT_MISMATCH',       'E-commerce ops',  'Pass checkout discount to ERP; raise credit note for the difference'),
