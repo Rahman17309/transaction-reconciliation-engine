@@ -4,12 +4,20 @@ Usage:  python src/match.py            -> data/output/*.csv|parquet and recon.du
 The engine reads only data/clean/. It never reads data/truth/ (that is for scoring on Day 4).
 """
 from pathlib import Path
+import os
 import sys
 
 import duckdb
 
 ROOT = Path(__file__).resolve().parents[1]
-SQL, CLEAN, OUT = ROOT / "sql", ROOT / "data" / "clean", ROOT / "data" / "output"
+DATA = Path(os.environ.get("DATA_DIR", ROOT / "data"))   # override to run on another generated dataset
+SQL, CLEAN, OUT = ROOT / "sql", DATA / "clean", DATA / "output"
+
+# Sort key per export, so files are byte-identical between runs (window ties otherwise reorder rows).
+ORDER = {"leg1_match": "order_id", "refund_match": "txn_id", "fee_audit": "txn_id",
+         "leg2_payout_rebuild": "settlement_id", "leg3_payout_bank": "settlement_id",
+         "exception_register": "exception_id", "exception_summary": "CASE class WHEN 'break' THEN 1 WHEN 'claim' THEN 2 ELSE 3 END, impact_inr DESC",
+         "cash_bridge": "step"}
 
 EXPORTS = {  # table -> format
     "leg1_match": "parquet", "refund_match": "parquet", "fee_audit": "parquet",
@@ -18,10 +26,10 @@ EXPORTS = {  # table -> format
 }
 
 
-def build(db_path: Path | str = ":memory:") -> duckdb.DuckDBPyConnection:
+def build(db_path: Path | str = ":memory:", clean_dir: Path = CLEAN) -> duckdb.DuckDBPyConnection:
     con = duckdb.connect(str(db_path))
     for f in sorted(SQL.glob("*.sql")):
-        con.execute(f.read_text().replace("{CLEAN}", CLEAN.as_posix()))
+        con.execute(f.read_text().replace("{CLEAN}", Path(clean_dir).as_posix()))
     return con
 
 
@@ -54,7 +62,7 @@ def main() -> int:
     for t, fmt in EXPORTS.items():
         target = OUT / f"{t}.{fmt}"
         opts = "(FORMAT parquet)" if fmt == "parquet" else "(HEADER, DELIMITER ',')"
-        con.execute(f"COPY (SELECT * FROM {t}) TO '{target.as_posix()}' {opts}")
+        con.execute(f"COPY (SELECT * FROM {t} ORDER BY {ORDER[t]}) TO '{target.as_posix()}' {opts}")
     results = checks(con)
     for name, ok in results:
         print(f"[{'PASS' if ok else 'FAIL'}] {name}")
