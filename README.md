@@ -2,7 +2,9 @@
 
 Three-way month-end reconciliation for an online retailer: **ERP ledger ↔ payment gateway ↔ bank statement**, with rule-based matching, exception reporting and a finance dashboard.
 
-> Status: **in progress** (week of 23–29 Nov 2026). Day 4 of 7: data, cleaning, EDA, the SQL matching engine and its validation against ground truth are done. The dashboard follows.
+> Status: **in progress** (week of 23–29 Nov 2026). Day 5 of 7: data, cleaning, EDA, the SQL matching engine, its validation against ground truth and the dashboard are done. ₹ impact and recommendations follow.
+>
+> **[Open the live dashboard ↗](https://rahman17309.github.io/work/recon-dashboard.html)**
 
 ## The business problem
 
@@ -63,10 +65,14 @@ src/clean.py           -> data/clean/*.parquet, dq_log.csv, validation_report.cs
 src/match.py           -> runs sql/*.sql in DuckDB -> data/output/ (matches, exception register, cash bridge)
 src/score.py           -> engine vs data/truth/labels.csv -> data/output/scorecard.csv, score_detail.csv
 src/robustness.py      -> whole pipeline on 20 regenerated months -> data/output/robustness.csv
+src/dashboard.py       -> dashboard/marts.sql on the engine -> 7 tie-out checks -> dashboard/reconciliation_dashboard.html
+                          (+ data/output/dashboard/*.csv, the marts as Power BI-ready files)
+src/screenshot_dashboard.py -> images/11-14_dashboard_*.png (headless Chromium)
 notebooks/01_data_quality.ipynb
 notebooks/02_eda.ipynb
 notebooks/03_sql_engine.ipynb
 notebooks/04_validation.ipynb -> images/*.png
+notebooks/05_dashboard.ipynb
 src/run_notebooks.py   executes every notebook in place (nbclient)
 ```
 
@@ -239,17 +245,47 @@ Precision is 100% on all 12 exception types. Recall in scope is 100% on 11 of th
 
 **What this means for finance:** nothing on the work list is a false alarm, and nothing real is dropped silently; the only misses sit in a short "check in early November" queue. Most out-of-scope labels exist only because the gateway report is pulled by UTC date, so pulling it by IST date is the one process fix that removes them.
 
+## The dashboard (Day 5, `src/dashboard.py` + `notebooks/05_dashboard.ipynb`)
+
+**[Live dashboard ↗](https://rahman17309.github.io/work/recon-dashboard.html)**: one self-contained HTML file, four report pages laid out like a Power BI report. It opens anywhere with no server or licence.
+
+![Dashboard overview](images/11_dashboard_overview.png)
+
+| Page | Answers | What's on it |
+|---|---|---|
+| 1 · Overview | Does it tie? | 8 KPI cards, "what needs attention" notes, cash bridge waterfall, daily leg-1 outcome with 7-day break rate, open items by type |
+| 2 · Exceptions | What do I work on first? | Slicers (owner, class, type, age, search) over all 619 items, ageing matrix, Pareto of break value, work queue largest-first, **CSV export of the filtered queue** |
+| 3 · Gateway fees | Are we charged the contract? | Daily effective MDR vs contract per method, cumulative overcharge, the claim to raise |
+| 4 · Settlements | Did the cash arrive? | Every payout coloured by status (on time / overdue / in transit), break rate by method |
+
+![Exceptions page](images/12_dashboard_exceptions.png)
+
+**How it's built**
+- **Semantic layer in SQL** (`dashboard/marts.sql`): six small marts on top of the engine. Each visual reads one mart, so every number traces back to one query. Window functions do the work DAX measures would do in Power BI: a 7-day trailing break rate (`SUM() OVER (ROWS 6 PRECEDING)`), running overcharge per method (`SUM() OVER (PARTITION BY method ORDER BY day)`), ageing buckets per owner.
+- **Tie-out before publish:** 7 checks reconcile the marts to the engine (daily keys and break ₹ = leg-1 totals, owner queue = register items and ₹, fee excess = fee claims, every payout once, bridge steps sum to the gap, residual ₹0.00). If one fails, the page isn't written. **7/7 pass.**
+- The marts are also written to `data/output/dashboard/*.csv`, so the same model can be loaded into Power BI as is.
+
+**What the dashboard adds to Days 2–4**
+- **The match rate is stable through the month.** On the 30 days with no cut-off rows, daily auto-match runs from 97.67% to 99.22%, and the 7-day break rate stays between 1.33% and 1.60%. There's no spike, which fits the process explanation (Day 2) rather than an outage.
+- **Breaks are old by the time anyone sees them.** 227 of 485 breaks (46.8%, ₹1,59,839.50) are more than 14 days old on close day. A booking error from 3 Oct waits until November to be found. That's a cost of reconciling monthly; the same engine run daily would put each break in front of its owner the next morning.
+- **Finance (AR) carries the volume:** 318 of 619 items. **Treasury carries the money:** 2 items worth ₹13.06 L (the held and in-transit payouts).
+
+![Gateway fees page](images/13_dashboard_fees.png)
+![Settlements page](images/14_dashboard_settlements.png)
+
 ## Repository layout
 ```
 data/raw/        source exports (generated)
 data/clean/      cleaned tables, DQ log, validation report, quarantine
 data/output/     engine outputs: leg matches, fee audit, exception register, cash bridge, scorecard, robustness
+data/output/dashboard/  dashboard marts as CSV (Power BI-ready)
+dashboard/       marts.sql (semantic layer) and the built dashboard HTML
 data/truth/      injected-problem labels (scoring only)
 docs/            data dictionary
 notebooks/       executed notebooks
 images/          charts used in this README
 sql/             the matching engine (DuckDB), run in file order
-src/             generator, cleaning pipeline, engine runner, notebook runner
+src/             generator, cleaning pipeline, engine runner, scoring, robustness, dashboard builder, notebook runner
 ```
 
 ## Roadmap
@@ -257,6 +293,6 @@ src/             generator, cleaning pipeline, engine runner, notebook runner
 - [x] Day 2 — EDA and first findings
 - [x] Day 3 — SQL (DuckDB) engine: rule cascade, fee audit, payout rebuild, exception register, cash bridge
 - [x] Day 4 — engine scored against ground truth: precision/recall per type, error analysis, rule sensitivity, 20-month robustness
-- [ ] Day 5 — reconciliation dashboard
+- [x] Day 5 — four-page dashboard on a SQL semantic layer, tied out to the engine before publishing
 - [ ] Day 6 — ₹ impact, recommendations, case study
 - [ ] Day 7 — final write-up and fresh-clone check
