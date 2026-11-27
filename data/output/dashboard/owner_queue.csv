@@ -1,0 +1,21 @@
+owner,class,age_bucket,items,txns,impact_inr,oldest_days
+E-commerce ops,break,0-7 d,36,36.000000,3346.000000,7
+E-commerce ops,break,15-21 d,19,19.000000,2000.000000,20
+E-commerce ops,break,22+ d,35,35.000000,4226.000000,30
+E-commerce ops,break,8-14 d,24,24.000000,1981.000000,14
+Finance (AR),break,0-7 d,77,77.000000,69092.000000,7
+Finance (AR),break,15-21 d,74,74.000000,62797.000000,21
+Finance (AR),break,22+ d,65,65.000000,59423.500000,30
+Finance (AR),break,8-14 d,83,83.000000,87814.000000,14
+Finance (AR),timing,0-7 d,16,16.000000,12348.500000,0
+Finance (AR),timing,not yet due,3,3.000000,3623.500000,-1
+Finance (GL),break,0-7 d,21,21.000000,17030.000000,7
+Finance (GL),break,15-21 d,17,17.000000,16481.000000,20
+Finance (GL),break,22+ d,17,17.000000,14912.000000,30
+Finance (GL),break,8-14 d,16,16.000000,13506.000000,14
+Finance (GL),timing,22+ d,62,62.000000,63347.000000,30
+Finance (GL),timing,not yet due,50,50.000000,46656.000000,-1
+Treasury,break,8-14 d,1,1.000000,641741.680000,11
+Treasury,timing,not yet due,1,1.000000,664381.600000,-2
+Treasury / vendor manager,claim,15-21 d,1,1308.000000,3445.150000,16
+Treasury / vendor manager,claim,22+ d,1,87.000000,508.010000,29
