@@ -7,3 +7,5 @@ scipy>=1.11
 nbclient>=0.10
 nbformat>=5.9
 ipykernel>=6.29
+plotly>=5.24
+playwright>=1.40   # dashboard screenshots only (python -m playwright install chromium)
