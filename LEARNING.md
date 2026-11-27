@@ -139,3 +139,39 @@ A: A real bug. A sale booked at 23:59 on 31 Oct and captured seconds later on 1 
 
 **Q: Precision is 100%. Isn't that suspicious?**
 A: It would be on real data, and I'd say so. Here the problems are injected by rules I documented, and the matching rules target those mechanisms, so very high scores are expected. The useful parts are the bugs scoring exposed, the trade-off curves, and stability on unseen months. On real data I'd expect lower numbers and would sample-audit flagged items by hand to estimate precision, because real data has no labels.
+
+---
+
+## Day 5: The reconciliation dashboard
+
+### What I did
+- Added a **semantic layer in SQL** (`dashboard/marts.sql`): six small marts on top of the engine tables (daily leg-1 status with a 7-day trailing break rate, owner work queue with ageing buckets, fee audit by method and day with a running overcharge, settlement tracker, break rate by method, headline KPIs).
+- Wrote `src/dashboard.py`, which builds the marts, runs **7 tie-out checks** back to the engine (daily keys and break ₹ = leg-1 totals, owner queue = register items and ₹, fee excess = fee claims, every payout once, bridge steps sum to the gap, residual ₹0.00), and only then writes one self-contained HTML file. 7/7 pass.
+- Four report pages: **Overview** (8 KPI cards, notes, cash bridge waterfall, daily outcome, items by type), **Exceptions** (slicers for owner, class, type, age and search over all 619 items, ageing matrix, Pareto, largest-first work queue, CSV export of the filtered selection), **Gateway fees** (daily effective MDR vs contract, cumulative overcharge, the claim) and **Settlements** (every payout by status, break rate by method).
+- Exported the marts to `data/output/dashboard/*.csv` so the same model loads into Power BI.
+- `src/screenshot_dashboard.py` renders each page with headless Chromium for the README; checked the slicers against the register (Finance (AR) breaks: 299 items, ₹2,79,126.50, the same in the page and in pandas) and the page at phone width (no horizontal scroll).
+- New findings: daily auto-match is stable (97.67–99.22% on full days, 7-day break rate 1.33–1.60%), and **227 of 485 breaks (46.8%) are over 14 days old at close**.
+
+### Key concepts
+- **Semantic layer.** A thin set of business-shaped tables between raw outputs and visuals. Every visual reads one mart, so a number on screen traces to one query, definitions live in one place, and the same marts can feed Power BI, a notebook or an email.
+- **Tie-out before publish.** A dashboard is a report, and a report that doesn't agree with its source is worse than none. Reconciling each mart back to the engine, and blocking publishing on failure, is the dashboard equivalent of a unit test.
+- **Trailing (rolling) windows.** `SUM(x) OVER (ORDER BY day ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)` smooths daily noise so a single bad day doesn't read as a trend. A ratio of rolling sums is better than a rolling mean of daily ratios because busy days get their proper weight.
+- **Ageing buckets.** Age = close date − event date, bucketed (0–7, 8–14, 15–21, 22+ days). Ageing turns a list into risk: old refunds and chargebacks drift past dispute windows, old receivables get harder to collect.
+- **Page design by question.** One page per question the controller asks (does it tie, what do I work on, are we overcharged, did the cash arrive) rather than one page per table. KPI cards first, then the chart that explains them, then the detail.
+- **Power BI equivalents.** Marts ≈ the model's tables; window functions ≈ DAX measures like running totals (`CALCULATE` + `DATESINPERIOD`); slicers ≈ the JS filters; "export data" ≈ the CSV button.
+
+### Interview Q&A
+**Q: Walk me through your reconciliation dashboard.**
+A: Four pages, one per question. Overview: does it tie? It shows ERP net sales ₹2.20 Cr against bank credits ₹2.04 Cr, a cash bridge that explains the ₹15.41 L gap to ₹0.00, and a 98.05% auto-match rate. Exceptions: what do I work on? Slicers by owner, type and age over all 619 open items, sorted by ₹, with an export for the team tracker; 66 items cover 80% of break value. Gateway fees: are we charged the contract? It shows the wallet rate stepping from 2.00% to 2.25% on 15 Oct and a ₹3,953 claim. Settlements: did the cash arrive? 30 of 32 payouts were on time, one is overdue and one is in transit.
+
+**Q: How do you make sure the dashboard shows the right numbers?**
+A: Two things. All logic lives in SQL marts, not in the charting code, so there's one definition per number. Then the build runs seven tie-out checks back to the engine (for example, the owner queue must sum to the register's 619 items and ₹ total, and fee excess must equal the fee claims) and refuses to write the page if any fail. I also checked the interactive filters against pandas for one slice.
+
+**Q: Why build it as HTML instead of Power BI?**
+A: For a public portfolio, an HTML file opens for anyone without a licence, and it's diffable in Git. The design is the same as a Power BI report: a model of marts, measures as window functions, slicers and drill to detail. The marts are exported as CSVs, so rebuilding it in Power BI is loading six tables and recreating the visuals. At work I'd use whatever the finance team already has.
+
+**Q: What did the dashboard show that the analysis didn't?**
+A: Ageing. Nearly half the breaks (227 of 485) were more than two weeks old on close day, because a once-a-month reconciliation finds a 3 Oct error in November. That turns the recommendation from "fix these breaks" into "run the engine daily", which I'll size tomorrow. It also confirmed the break rate is flat through the month (7-day rate 1.33–1.60%), so there was no outage to chase.
+
+**Q: How would you handle a dashboard user who says a number is wrong?**
+A: Trace it. Every card maps to one mart and one SQL query, and the mart ties to the engine, which ties to the source files through the cash bridge. So I can show the path from the card to the rows behind it. If it really is wrong, the fix goes in the SQL with a new tie-out check so it can't come back, and I tell the user what changed.
