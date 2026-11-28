@@ -4,7 +4,8 @@
 -- Three questions, three sections:
 --   A. Cash to recover now        one-off amounts we can claim back this close
 --   B. Books wrong if closed now  revenue misstatement if October closed without the engine
---   C. Recurring cost per year    leakage that repeats every month until the cause is fixed
+--   C. Recurring cost per year    money that leaves every month until the cause is fixed
+--   D. Revenue at risk per year   exposure that is a loss only if goods shipped unpaid (kept out of C)
 --
 -- Every assumption is a row in impact_params, so finance can change it and re-run.
 
@@ -89,8 +90,10 @@ lines AS (
            'Get the contract rate reinstated; add the fee audit to every close',
            regime_excess / regime_volume * month_volume, annual_leakage, 'run rate x 365 days'
     FROM fee_run_rate
-    UNION ALL SELECT 'C', 2, 'Receipts with no captured payment', 'Finance (AR) + E-commerce ops',
-           'Block order confirmation until the gateway confirms capture',
+    -- D · revenue at risk: a receipt with no captured payment is a loss only if the goods shipped,
+    -- which the ERP extract can't show, so it is kept out of the cost total in C
+    UNION ALL SELECT 'D', 1, 'Receipts with no captured payment', 'Finance (AR) + E-commerce ops',
+           'Post receipts from the capture event; check these orders against the dispatch log',
            f.no_gateway_record + f.payment_failed, (f.no_gateway_record + f.payment_failed) * p.months_per_year,
            'month x 12; at risk if goods ship unpaid' FROM f, p
     UNION ALL SELECT 'C', 3, 'Chargebacks', 'Finance (AR)',
@@ -114,7 +117,8 @@ SELECT
     f.erp_net_sales * p.materiality_share                                                       AS materiality_threshold,
     (SELECT SUM(month_inr) FROM impact_lines WHERE section = 'B') > f.erp_net_sales * p.materiality_share AS is_material,
     (SELECT SUM(annual_inr) FROM impact_lines WHERE section = 'C' AND line LIKE 'Fee overcharge%') AS fee_leakage_annual,
-    (SELECT SUM(annual_inr) FROM impact_lines WHERE section = 'C')                             AS recurring_annual,
+    (SELECT SUM(annual_inr) FROM impact_lines WHERE section = 'C')                             AS recurring_cost_annual,
+    (SELECT SUM(annual_inr) FROM impact_lines WHERE section = 'D')                             AS revenue_at_risk_annual,
     (SELECT SUM(ABS(impact_inr)) FILTER (WHERE class = 'break' AND age_days > 14) FROM exception_register) AS breaks_over_14d_inr,
     (SELECT COUNT(*) FILTER (WHERE class = 'break' AND age_days > 14) FROM exception_register) AS breaks_over_14d,
     (SELECT MEDIAN(age_days) FILTER (WHERE class = 'break') FROM exception_register)          AS median_break_age_days

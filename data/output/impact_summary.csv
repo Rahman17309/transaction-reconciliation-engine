@@ -1,2 +1,2 @@
-erp_net_sales,cash_to_recover,net_revenue_overstatement,gross_revenue_misstatement,overstatement_share,materiality_threshold,is_material,fee_leakage_annual,recurring_annual,breaks_over_14d_inr,breaks_over_14d,median_break_age_days
-21991231.5,670844.8400000001,228750.5,352608.5,0.010401895864722264,109956.1575,True,81298.90908391436,2318098.9090839145,159839.5,227,14.0
+erp_net_sales,cash_to_recover,net_revenue_overstatement,gross_revenue_misstatement,overstatement_share,materiality_threshold,is_material,fee_leakage_annual,recurring_cost_annual,revenue_at_risk_annual,breaks_over_14d_inr,breaks_over_14d,median_break_age_days
+21991231.5,670844.8400000001,228750.5,352608.5,0.010401895864722264,109956.1575,True,81298.90908391436,383098.90908391436,1935000.0,159839.5,227,14.0

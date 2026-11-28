@@ -40,7 +40,7 @@ def size(clean_dir: Path) -> dict[str, pd.DataFrame]:
 def month_metrics(res: dict[str, pd.DataFrame]) -> dict[str, float]:
     """One row per month: the quantities the annual range is built from."""
     s, lines, fee = res["impact_summary"].iloc[0], res["impact_lines"], res["fee_run_rate"]
-    c = lines[lines.section == "C"]
+    c = lines[lines.section.isin(["C", "D"])]
     get = lambda pat: float(c.loc[c.line.str.startswith(pat), "month_inr"].sum())
     return {
         "erp_net_sales": s.erp_net_sales,
@@ -73,13 +73,13 @@ def months(n: int) -> pd.DataFrame:
 
 
 def annual_range(m: pd.DataFrame) -> pd.DataFrame:
-    """Annual cost of the recurring lines: mean month x 12 (fee leakage is already annual),
+    """Annualised exposure of the recurring lines: mean month x 12 (fee leakage is already annual),
     with a bootstrap 95% interval on the mean and the min-max of single months."""
     rng = np.random.default_rng(7)
     spec = [("Fee overcharge at current rates", "fee_leakage_annual", 1),
-            ("Receipts with no captured payment", "unpaid_receipts_month", 12),
+            ("Receipts with no captured payment (revenue at risk)", "unpaid_receipts_month", 12),
             ("Chargebacks", "chargebacks_month", 12),
-            ("Revenue overstated if closed unreconciled", "net_revenue_overstatement", 12)]
+            ("Revenue overstated if closed unreconciled (misstatement)", "net_revenue_overstatement", 12)]
     out = []
     for name, col, k in spec:
         x = m[col].to_numpy() * k
