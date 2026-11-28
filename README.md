@@ -2,9 +2,9 @@
 
 Three-way month-end reconciliation for an online retailer: **ERP ledger ↔ payment gateway ↔ bank statement**, with rule-based matching, exception reporting and a finance dashboard.
 
-> Status: **in progress** (week of 23–29 Nov 2026). Day 5 of 7: data, cleaning, EDA, the SQL matching engine, its validation against ground truth and the dashboard are done. ₹ impact and recommendations follow.
+> Status: **in progress** (week of 23–29 Nov 2026). Day 6 of 7: data, cleaning, EDA, the SQL matching engine, its validation, the dashboard and the ₹ impact sizing with recommendations are done. Final write-up tomorrow.
 >
-> **[Open the live dashboard ↗](https://rahman17309.github.io/work/recon-dashboard.html)**
+> **[Open the live dashboard ↗](https://rahman17309.github.io/work/recon-dashboard.html)** · **[Read the recommendations ↗](reports/recommendations.md)** · **[Case study ↗](https://rahman17309.github.io/work/reconciliation-engine.html)**
 
 ## The business problem
 
@@ -68,11 +68,15 @@ src/robustness.py      -> whole pipeline on 20 regenerated months -> data/output
 src/dashboard.py       -> dashboard/marts.sql on the engine -> 7 tie-out checks -> dashboard/reconciliation_dashboard.html
                           (+ data/output/dashboard/*.csv, the marts as Power BI-ready files)
 src/screenshot_dashboard.py -> images/11-14_dashboard_*.png (headless Chromium)
+src/impact.py          -> impact/impact.sql on the engine -> data/output/impact_*.csv, fee_run_rate.csv
+                          (--months 20: same model on 20 regenerated months, bootstrap annual range)
 notebooks/01_data_quality.ipynb
 notebooks/02_eda.ipynb
 notebooks/03_sql_engine.ipynb
 notebooks/04_validation.ipynb -> images/*.png
 notebooks/05_dashboard.ipynb
+notebooks/06_impact.ipynb
+reports/recommendations.md
 src/run_notebooks.py   executes every notebook in place (nbclient)
 ```
 
@@ -273,12 +277,52 @@ Precision is 100% on all 12 exception types. Recall in scope is 100% on 11 of th
 ![Gateway fees page](images/13_dashboard_fees.png)
 ![Settlements page](images/14_dashboard_settlements.png)
 
+## ₹ impact and recommendations (Day 6, `impact/impact.sql` + `notebooks/06_impact.ipynb`)
+
+**[Full recommendations report →](reports/recommendations.md)**
+
+A controller needs rupees to decide where the team's time goes. The impact model is SQL on top of the engine tables, sized three ways because they answer different questions. Two assumptions are parameters, not hard-coded: cost of funds 10% a year and performance materiality 0.5% of revenue.
+
+![Impact overview](images/15_impact_overview.png)
+
+| | Question | October |
+|---|---|---:|
+| **A · Cash to recover now** | What can we claim back this close? | **₹6,70,844.84** (held payout ₹6,41,741.68 = 95.7%, fee claim ₹3,953.16, chargebacks to contest ≤ ₹25,150) |
+| **B · Books wrong if closed now** | How far off would revenue be without the engine? | **₹2,28,750.50 overstated = 1.040% of net sales**, 2.08× a 0.5% materiality threshold |
+| **C · Recurring cost per year** | What keeps leaking until the cause is fixed? | fee overcharge ₹81,298.91 · receipts with no payment ₹19.35 L at risk · chargebacks ₹3.02 L |
+
+**What the sizing adds**
+- **The misstatement is material every month, not just in October.** Re-sized on the 20 regenerated months, revenue would be overstated by 0.851%–1.214% of sales (mean 1.059%); material in 20 of 20. About 480 small items all point the same way.
+- **The fee problem is 20× bigger than the October claim.** The wallet step landed on 15 Oct, so October only carries half a month. `fee_run_rate` prices only the days since the `LAG()`-detected step: 0.295% of wallet volume (0.25 points plus GST), or ₹75,317.50 a year; card adds ₹5,981.41. Across 20 months: ₹82,307 a year (bootstrap 95% CI ₹81,465–₹83,129).
+- **The biggest recurring number is revenue at risk, not a confirmed loss.** 171 receipts a month (₹1,61,250) are posted for orders with no captured payment, ≈ ₹18.85 L a year over 20 months (95% CI ₹18.08–19.60 L). It is a loss only where goods shipped, which needs the dispatch log to confirm.
+- **Monthly reconciliation costs time.** Weighted by value, breaks sat unseen for 1,20,13,244 ₹-days; a daily run (each break seen next morning) cuts that by 91.7%.
+
+![Misstatement vs materiality](images/16_misstatement_vs_materiality.png)
+![Annual range](images/17_annual_range.png)
+
+**Recommendations, ranked** (cash first, then recurring losses, then process; details in the report)
+
+| # | Action | Owner | ₹ at stake |
+|---|---|---|---:|
+| 1 | Recover the held 19 Oct payout; book a receivable; alert on day-1 overdue | Treasury | ₹6.42 L now |
+| 2 | Post receipts from the capture webhook, not order creation; hold dispatch on failed payments | Finance (AR) + E-com ops | ₹1.61 L/month at risk |
+| 3 | Claim October fees and get wallet MDR back to 2.00%; fee audit every close | Treasury / vendor manager | ≈ ₹0.81 L/year |
+| 4 | Auto-create credit notes and chargeback entries from gateway events | Finance (AR) | ₹1.18 L/month misstatement |
+| 5 | Contest chargebacks with delivery proof | Finance (AR) | up to ₹25,150 now |
+| 6 | Send the post-coupon checkout amount to the ERP | E-commerce ops | ₹11,553/month |
+| 7 | Pull the gateway report by IST date | Finance (GL) | removes 115 timing items |
+| 8 | Run the engine daily | Finance ops | 91.7% fewer ₹-days unseen |
+
+**Limits:** annual figures assume flat volume and no fixes (the cost of doing nothing, not a forecast); the 20-month ranges measure noise at fixed injection rates; the held payout is not annualised because one per month is a generator assumption.
+
 ## Repository layout
 ```
 data/raw/        source exports (generated)
 data/clean/      cleaned tables, DQ log, validation report, quarantine
 data/output/     engine outputs: leg matches, fee audit, exception register, cash bridge, scorecard, robustness
 data/output/dashboard/  dashboard marts as CSV (Power BI-ready)
+impact/          impact.sql: ₹ impact model on the engine tables
+reports/         recommendations.md for the finance controller
 dashboard/       marts.sql (semantic layer) and the built dashboard HTML
 data/truth/      injected-problem labels (scoring only)
 docs/            data dictionary
@@ -294,5 +338,5 @@ src/             generator, cleaning pipeline, engine runner, scoring, robustnes
 - [x] Day 3 — SQL (DuckDB) engine: rule cascade, fee audit, payout rebuild, exception register, cash bridge
 - [x] Day 4 — engine scored against ground truth: precision/recall per type, error analysis, rule sensitivity, 20-month robustness
 - [x] Day 5 — four-page dashboard on a SQL semantic layer, tied out to the engine before publishing
-- [ ] Day 6 — ₹ impact, recommendations, case study
+- [x] Day 6 — ₹ impact sizing (cash, materiality, annual run rate over 20 months), ranked recommendations, portfolio case study
 - [ ] Day 7 — final write-up and fresh-clone check
