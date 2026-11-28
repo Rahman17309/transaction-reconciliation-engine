@@ -289,11 +289,12 @@ A controller needs rupees to decide where the team's time goes. The impact model
 |---|---|---:|
 | **A · Cash to recover now** | What can we claim back this close? | **₹6,70,844.84** (held payout ₹6,41,741.68 = 95.7%, fee claim ₹3,953.16, chargebacks to contest ≤ ₹25,150) |
 | **B · Books wrong if closed now** | How far off would revenue be without the engine? | **₹2,28,750.50 overstated = 1.040% of net sales**, 2.08× a 0.5% materiality threshold |
-| **C · Recurring cost per year** | What keeps leaking until the cause is fixed? | fee overcharge ₹81,298.91 · receipts with no payment ₹19.35 L at risk · chargebacks ₹3.02 L |
+| **C · Recurring cost per year** | What money leaves every month until the cause is fixed? | **₹3,83,098.91**: fees above contract ₹81,298.91 (incl. GST) + chargebacks ₹3,01,800 |
+| **D · Revenue at risk per year** | What could become a loss, but isn't proven to be one? | ₹19,35,000: receipts with no captured payment (kept out of C) |
 
 **What the sizing adds**
 - **The misstatement is material every month, not just in October.** Re-sized on the 20 regenerated months, revenue would be overstated by 0.851%–1.214% of sales (mean 1.059%); material in 20 of 20. About 480 small items all point the same way.
-- **The fee problem is 20× bigger than the October claim.** The wallet step landed on 15 Oct, so October only carries half a month. `fee_run_rate` prices only the days since the `LAG()`-detected step: 0.295% of wallet volume (0.25 points plus GST), or ₹75,317.50 a year; card adds ₹5,981.41. Across 20 months: ₹82,307 a year (bootstrap 95% CI ₹81,465–₹83,129).
+- **The fee problem is over 20× bigger than the October claim.** The wallet step landed on 15 Oct, so October only carries half a month. `fee_run_rate` prices only the days since the `LAG()`-detected step: 0.295% of wallet volume (0.25 points plus GST), or ₹75,317.50 a year incl. GST, about 22× October's ₹3,445.15 wallet overcharge; card adds ₹5,981.41. Across 20 months: ₹82,307 a year (bootstrap 95% CI ₹81,465–₹83,129).
 - **The biggest recurring number is revenue at risk, not a confirmed loss.** 171 receipts a month (₹1,61,250) are posted for orders with no captured payment, ≈ ₹18.85 L a year over 20 months (95% CI ₹18.08–19.60 L). It is a loss only where goods shipped, which needs the dispatch log to confirm.
 - **Monthly reconciliation costs time.** Weighted by value, breaks sat unseen for 1,20,13,244 ₹-days; a daily run (each break seen next morning) cuts that by 91.7%.
 
@@ -306,7 +307,7 @@ A controller needs rupees to decide where the team's time goes. The impact model
 |---|---|---|---:|
 | 1 | Recover the held 19 Oct payout; book a receivable; alert on day-1 overdue | Treasury | ₹6.42 L now |
 | 2 | Post receipts from the capture webhook, not order creation; hold dispatch on failed payments | Finance (AR) + E-com ops | ₹1.61 L/month at risk |
-| 3 | Claim October fees and get wallet MDR back to 2.00%; fee audit every close | Treasury / vendor manager | ≈ ₹0.81 L/year |
+| 3 | Claim October fees and get wallet MDR back to 2.00%; fee audit every close | Treasury / vendor manager | ₹81,299/year incl. GST |
 | 4 | Auto-create credit notes and chargeback entries from gateway events | Finance (AR) | ₹1.18 L/month misstatement |
 | 5 | Contest chargebacks with delivery proof | Finance (AR) | up to ₹25,150 now |
 | 6 | Send the post-coupon checkout amount to the ERP | E-commerce ops | ₹11,553/month |

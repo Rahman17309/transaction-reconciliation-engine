@@ -4,7 +4,7 @@
 
 ## In one paragraph
 
-The engine reconciles ERP net sales of **₹2,19,91,231.50** to PayFlux credits in the bank of **₹2,04,49,800.31** with **₹0.00 unexplained**. Three things need a decision. **₹6.71 L of cash can be recovered now**, almost all of it one payout the gateway is holding. **If October closed without these adjustments, revenue would be overstated by ₹2.29 L (1.04% of sales)**, about twice a 0.5% materiality threshold, and the same happens in all 20 test months. And **two causes keep costing money every month**: receipts posted for orders that were never paid (₹1.61 L in October) and a wallet fee rate PayFlux raised without a contract change (about ₹0.81 L a year at the new rate).
+The engine reconciles ERP net sales of **₹2,19,91,231.50** to PayFlux credits in the bank of **₹2,04,49,800.31** with **₹0.00 unexplained**. Three things need a decision. **₹6.71 L of cash can be recovered now**, almost all of it one payout the gateway is holding. **If October closed without these adjustments, revenue would be overstated by ₹2.29 L (1.04% of sales)**, about twice a 0.5% materiality threshold, and the same happens in all 20 test months. **Money keeps leaving every month**: ₹3.83 L a year in fees above contract (₹81,299 incl. GST, most of it a wallet rate PayFlux raised without a contract change) and chargebacks. Separately, **₹1.61 L a month of receipts have no captured payment behind them**. That is revenue at risk, not a proven loss, so it is kept out of the cost figure.
 
 ![Impact overview](../images/15_impact_overview.png)
 
@@ -36,18 +36,24 @@ Against a performance-materiality threshold of 0.5% of revenue (₹1,09,956.16) 
 
 ![Misstatement vs materiality](../images/16_misstatement_vs_materiality.png)
 
-### C · What it costs per year if nothing changes
+### C · Recurring cost per year if nothing changes
 
 | Line | October | Per year (October run rate) | 20-month mean, 95% CI |
 |---|---:|---:|---:|
-| Fee overcharge at current rates (Wallet ₹75,317.50 + Card ₹5,981.41) | ₹3,953.16 claimed | ₹81,298.91 | ₹82,307 (₹81,465 – ₹83,129) |
-| Receipts with no captured payment (**revenue at risk**) | ₹1,61,250.00 | ₹19,35,000.00 | ₹18.85 L (₹18.08 – ₹19.60 L) |
+| Fee overcharge at current rates, incl. 18% GST: Wallet ₹75,317.50 + Card ₹5,981.41 | ₹3,953.16 claimed (Wallet ₹3,445.15, Card ₹508.01) | ₹81,298.91 | ₹82,307 (₹81,465 – ₹83,129) |
 | Chargebacks | ₹25,150.00 | ₹3,01,800.00 | ₹3.43 L (₹3.26 – ₹3.61 L) |
+| **Total recurring cost** | | **₹3,83,098.91** | |
 | Cost of funds on a held payout (10% a year, 11 days) | ₹1,934.02 per occurrence | not annualised | – |
 
+### D · Revenue at risk per year (kept out of C)
+
+| Line | October | Per year (October run rate) | 20-month mean, 95% CI |
+|---|---:|---:|---:|
+| Receipts with no captured payment | ₹1,61,250.00 | ₹19,35,000.00 | ₹18.85 L (₹18.08 – ₹19.60 L) |
+
 How to read this:
-- **Fees.** The wallet rate moved from 2.00% to 2.25% on 15 Oct, so October only carries half a month of it. At the new rate the excess is 0.295% of wallet volume (0.25 points plus 18% GST), about ₹81k a year, roughly 20× the October claim. That is why the rate, not just the refund, has to be raised with PayFlux.
-- **Receipts with no payment** are revenue at risk, not a confirmed loss: they become a loss only if the goods shipped. The ERP extract can't tell us that; the warehouse dispatch log can.
+- **Fees.** The wallet rate moved from 2.00% to 2.25% on 15 Oct, so October only carries half a month of it. At the new rate the excess is 0.295% of wallet volume (0.25 points plus 18% GST), ₹75,317.50 a year, about 22× the ₹3,445.15 wallet overcharge in October. With card overcharges (₹5,981.41) the total is ₹81,298.91 a year, about 21× the full October claim. All fee figures include GST. That is why the rate, not just the refund, has to be raised with PayFlux.
+- **Receipts with no payment (D)** are revenue at risk, not a confirmed loss, so they are not counted as a cost: they become a loss only if the goods shipped. The ERP extract can't tell us that; the warehouse dispatch log can.
 - **Ranges** come from 20 months generated with the same rates, so they measure month-to-month noise, not the chance that the rates change.
 - **The held payout** is not annualised. One held batch a month is a generator assumption; October alone doesn't prove a pattern.
 
@@ -67,7 +73,7 @@ Ranked by cash first (it's owed now), then fixes that stop a recurring loss, the
 |---|---|---|---:|---|---|
 | 1 | **Recover the held 19 Oct payout.** Escalate to PayFlux this week, book it as a receivable from the gateway, and add a "payout overdue by 1 day" alert. | Treasury | ₹6,41,741.68 now | Low | `leg3_payout_bank.csv`, rule S4 |
 | 2 | **Stop posting receipts before the gateway confirms capture.** Post the ERP receipt from the capture webhook, not from order creation, and hold dispatch for orders whose payment failed. Check the 171 October orders against the dispatch log to size the real loss. | Finance (AR) + E-commerce ops | ₹1.61 L a month at risk (≈ ₹18.85 L a year) | Medium (integration change) | rules R4, R7 in `leg1_match` |
-| 3 | **Get the wallet rate back to contract and claim October.** Send the claim (₹3,953.16) with the per-transaction extract and ask PayFlux to reinstate 2.00% from 15 Oct. Make the fee audit a standing close step so the next step change is caught in a day. | Treasury / vendor manager | ≈ ₹0.81 L a year | Low | `fee_audit.parquet`, `fee_run_rate.csv` |
+| 3 | **Get the wallet rate back to contract and claim October.** Send the claim (₹3,953.16) with the per-transaction extract and ask PayFlux to reinstate 2.00% from 15 Oct. Make the fee audit a standing close step so the next step change is caught in a day. | Treasury / vendor manager | ₹81,299 a year incl. GST (wallet ₹75,318) | Low | `fee_audit.parquet`, `fee_run_rate.csv` |
 | 4 | **Create credit notes and chargeback entries automatically** from the gateway's refund and chargeback events, instead of by hand. | Finance (AR) | ₹1.18 L a month of overstatement (₹92,726.50 refunds + ₹25,150 chargebacks) | Medium | rules F3, chargebacks in `exception_register.csv` |
 | 5 | **Contest chargebacks with delivery proof** and track the chargeback rate by method. | Finance (AR) | up to ₹25,150 now; ≈ ₹3.43 L a year | Low | `exception_register.csv` |
 | 6 | **Send the final checkout amount (after coupons) to the ERP.** | E-commerce ops | ₹11,553 a month, 114 items | Low | rule R3 |
@@ -81,6 +87,6 @@ Ranked by cash first (it's owed now), then fixes that stop a recurring loss, the
 - **Synthetic data.** The data comes from a seeded generator built to look like real exports (`src/generate_data.py`, documented in the README). The method carries over to real exports; the rupee figures are only illustrative.
 - **Two assumptions are parameters** in `impact_params` and can be changed: cost of funds 10% a year, materiality 0.5% of revenue.
 - **Annual figures assume flat volume** and that nothing is fixed. They are the cost of doing nothing, not a forecast.
-- **The C lines are not all additive with B**: chargebacks appear in both, because the same rupee is both a misstatement (B) and a recurring cost (C).
+- **Sections overlap and are not additive**: chargebacks appear in B and C, and receipts with no payment in B and D, because the same rupee can be both a misstatement and a cost or exposure.
 
 Reproduce: `python src/impact.py --months 20`, then run `notebooks/06_impact.ipynb`.
