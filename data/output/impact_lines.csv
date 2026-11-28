@@ -1,0 +1,14 @@
+section,ord,line,owner,action,month_inr,annual_inr,basis
+A,1,Held settlement (19 Oct batch),Treasury,Escalate to PayFlux; book a receivable from the gateway,641741.68,,one-off
+A,2,Fee overcharge refund claim,Treasury / vendor manager,Claim the October excess with the fee_audit extract,3953.160000000002,,one-off
+A,3,Chargebacks to contest (upper bound),Finance (AR),Contest with delivery proof inside the gateway window,25150.0,,"one-off, upper bound"
+B,1,Receipts with no captured payment (no record + failed),Finance (AR),Collect or reverse the receipts,161250.0,,overstated
+B,2,"Refunds paid out, no credit note",Finance (AR),Raise the credit notes,92726.5,,overstated
+B,3,"Chargebacks netted, not booked",Finance (AR),Book the chargebacks,25150.0,,overstated
+B,4,Checkout discounts not in the ERP,E-commerce ops,Send the final checkout amount to the ERP,11553.0,,overstated
+B,5,Captured payments never booked,Finance (GL),Book the receipts,-61929.0,,understated
+C,1,Fee overcharge at current rates: Card,Treasury / vendor manager,Get the contract rate reinstated; add the fee audit to every close,508.0099999999997,5981.408064516127,run rate x 365 days
+C,1,Fee overcharge at current rates: Wallet,Treasury / vendor manager,Get the contract rate reinstated; add the fee audit to every close,6396.828853702315,75317.50101939823,run rate x 365 days
+C,2,Receipts with no captured payment,Finance (AR) + E-commerce ops,Block order confirmation until the gateway confirms capture,161250.0,1935000.0,month x 12; at risk if goods ship unpaid
+C,3,Chargebacks,Finance (AR),Track chargeback rate by method; contest with evidence,25150.0,301800.0,month x 12
+C,4,Cost of funds on a held payout (per occurrence),Treasury,Daily payout-to-bank check; escalate on day 1 overdue,1934.0160219178085,,"per occurrence, days overdue at close x cost of funds"
